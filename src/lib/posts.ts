@@ -14,10 +14,15 @@ export async function getPosts(): Promise<Post[]> {
 		*/
 		const slug = filename.replace('.md', '');
 
-		if (file && typeof file === 'object' && 'metadata' in file && slug) {
-			const metadata = file.metadata as Omit<Post, 'slug'>;
-			const post = { ...metadata, slug } as Post;
-			post.published && posts.push(post);
+		const validFile = file && typeof file === 'object' && 'metadata' in file && slug;
+		if (!validFile) continue;
+
+		const metadata = file.metadata;
+
+		if (metadata.published) {
+			const date = dateStringToLocaleDateString({dateString: metadata.date});
+			const post: Post = { ...metadata, slug, date };
+			posts.push(post);
 		}
 	}
 
@@ -26,4 +31,8 @@ export async function getPosts(): Promise<Post[]> {
 	);
 
 	return posts;
+}
+
+function dateStringToLocaleDateString({dateString}: {dateString: string}): string {
+	return new Date(dateString).toLocaleDateString('fr-FR', { dateStyle: 'long' });
 }
