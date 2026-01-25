@@ -1,4 +1,4 @@
-import type { Post } from './types';
+import type { Post } from './types.ts';
 
 export async function getPosts(): Promise<Post[]> {
 	let posts: Post[] = [];
@@ -7,7 +7,12 @@ export async function getPosts(): Promise<Post[]> {
 
 	for (const path in paths) {
 		const file = paths[path];
-		const slug = path.split('/').at(-1)?.replace('.md', '');
+		const filename = path.split('/').at(-1) ?? "";
+		/**
+		* Le slug porte le numéro de l'article. Cela permet de les avoir dans l'ordre d'arrivée dans l'arborescence.
+		* Et de les trier avec une simple méthode.
+		*/
+		const slug = filename.replace('.md', '');
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>;
@@ -16,8 +21,8 @@ export async function getPosts(): Promise<Post[]> {
 		}
 	}
 
-	posts = posts.sort((first, second) =>
-		new Date(second.date).getTime() - new Date(first.date).getTime()
+	posts.sort((a, b) =>
+		parseInt(b.slug) - parseInt(a.slug)
 	);
 
 	return posts;

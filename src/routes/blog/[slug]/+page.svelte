@@ -11,6 +11,15 @@
 	<header class="mb-8">
 		<p class="text-gray-500 mb-2">{new Date(data.meta.date).toLocaleDateString('fr-FR', { dateStyle: 'long' })}</p>
 		<h1 class="text-4xl font-bold">{data.meta.title}</h1>
+		<em class="text-gray-500 font-italic mb-2">{data.meta.description}</em>
+
+		<div class="flex flex-wrap gap-2 mb-2">
+			{#each data.meta.category as category}
+				<span class="inline-block px-3 py-0 rounded-sm text-sm font-mono" style="background-color: var(--color-blue-electric); color: #fff;">
+					{category}
+				</span>
+			{/each}
+		</div>
 	</header>
 
 	<div class="markdown-content">
@@ -18,7 +27,7 @@
 	</div>
 
 	<footer class="mt-12 pt-8 border-t border-gray-100">
-		<a href="/" class="text-blue-600 hover:underline">← Retour à l'accueil</a>
+		<a href="/">← Mes autres <s>brouillons</s> articles</a>
 	</footer>
 </article>
 

@@ -1,1 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@font-face {
+    font-family: "Instrument Serif";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/InstrumentSerif-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Instrument Serif";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/InstrumentSerif-Italic.woff2") format("woff2");
+}
+
 @import "tailwindcss";
+
+@theme {
+    --font-display: "Instrument Serif", serif;
+    --font-sans: "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
+    /* Couleurs principales (thème clair) */
+    --color-blue-mithril: #6B7A8F; /* Bleu-gris "mithril" */
+    --color-green-lothlorien: #3A5F0B; /* Vert forêt Lothlórien */
+    --color-gold-rohan: #D4A017; /* Or vieilli Rohan */
+    --color-green-elf: #4CAF50; /* Vert elfique */
+    --color-blue-electric: #00B4FF; /* Bleu électrique (pour accents) */
+    --color-black-gondor: #121212; /* Noir Gondor (texte/thème sombre) */
+    --color-white-parchment: #F8F8F8; /* Blanc cassé (fond clair) */
+    --color-grey-shadow: #1E1E1E; /* Gris anthracite (thème sombre) */
+
+    /* Couleurs pour le code (inspirées de Dracula/GitHub Dark) */
+    --color-gold-code-keyword: #FFD700; /* Doré pour les mots-clés */
+    --color-green-code-string: #2ECC71; /* Vert pour les strings */
+    --color-blue-code-function: #3498DB; /* Bleu pour les fonctions */
+    --color-grey-code-comment: #95A5A6; /* Gris pour les commentaires */
+    --color-black-code-background: #282C34; /* Fond des blocs de code (sombre) */
+
+    /* Variantes claires/foncées pour les composants */
+    --color-white-light-primary: #E0F2F1; /* Fond clair pour cartes/composants */
+    --color-black-dark-primary: #263238; /* Fond sombre pour cartes/composants */
+    --color-blue-light-accent: #4DD0E1; /* Accent clair (bleu cyan) */
+    --color-blue-dark-accent: #00838F; /* Accent foncé (bleu cyan profond) */
+}

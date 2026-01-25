@@ -1,14 +1,16 @@
 import { error } from '@sveltejs/kit';
+import type { Post } from '$lib/types';
 
-export async function load({ params }) {
+export async function load({ params }: { params: { slug: string } }): Promise<{ content: string, meta: Post }> {
 	try {
-		const post = await import(`../../../lib/posts/${params.slug}.md`);
+		const post = await import(`$lib/posts/${params.slug}.md`);
 
 		return {
 			content: post.default,
-			meta: post.metadata
+			meta: post.metadata,
 		};
 	} catch (e) {
-		error(404, `Impossible de trouver l'article "${params.slug}"`);
+		error(404, `The Article You Seek Has Been Lost to the Shadow "${params.slug}"`);
 	}
 }
+
