@@ -1,45 +1,27 @@
-import { useSignal, useSignalEffect } from "@preact/signals";
-import { useEffect } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
 type Theme = "light" | "dark";
 
-const STORAGE_KEY = "theme";
-
-function getInitialTheme(): Theme {
-  if (typeof document === "undefined") return "light";
-
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === "light" || stored === "dark") {
-    return stored;
-  }
-
-  // Optional: check system preference
-  // if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
-
-  return "light";
-}
-
 export default function ThemeToggle() {
-  const theme = useSignal<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    theme.value = getInitialTheme();
+    const isDark = document.documentElement.classList.contains("dark");
+    setTheme(isDark ? "dark" : "light");
   }, []);
 
-  useSignalEffect(() => {
-    if (typeof document === "undefined") return;
-
-    const root = document.documentElement;
-    if (theme.value === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-    localStorage.setItem(STORAGE_KEY, theme.value);
-  });
-
   const toggle = () => {
-    theme.value = theme.value === "light" ? "dark" : "light";
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+
+    if (newTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    document.cookie =
+      `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
   };
 
   return (
@@ -47,8 +29,9 @@ export default function ThemeToggle() {
       onClick={toggle}
       class="relative p-2 rounded-full hover:bg-surface-elevated transition-colors duration-200"
       aria-label="Changer de thème"
+      type="button"
     >
-      {theme.value === "dark"
+      {theme === "dark"
         ? (
           <img
             src="/assets/on-ring-light.svg"
