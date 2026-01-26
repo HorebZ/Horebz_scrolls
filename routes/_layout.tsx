@@ -20,10 +20,10 @@ export default define.layout(function Layout({ Component }) {
           <nav class="flex items-center gap-6">
             <div class="flex items-center gap-4">
               <a
-                href="/"
+                href="/404"
                 class="text-text-secondary hover:text-accent transition-colors"
               >
-                Accueil
+                404
               </a>
               <a
                 href="https://github.com/HorebZ"

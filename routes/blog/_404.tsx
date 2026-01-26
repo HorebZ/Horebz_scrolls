@@ -5,7 +5,7 @@ export default define.page(function NotFound() {
   return (
     <div class="max-w-3xl mx-auto py-12 px-4">
       <Head>
-        <title>404 - Page non trouvée | Horeb'z Scrolls</title>
+        <title>404 | Horeb'z Scrolls</title>
       </Head>
 
       <div class="text-center">
