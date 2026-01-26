@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 @font-face {
   font-family: "Instrument Serif";
@@ -14,6 +14,22 @@
   font-weight: 400;
   font-display: swap;
   src: url("/fonts/InstrumentSerif-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Monaspace Krypton";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/MonaspaceKrypton-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Monaspace Krypton";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/MonaspaceKrypton-Italic.woff2") format("woff2");
 }
 
 @import "tailwindcss";
@@ -50,6 +66,13 @@
   --code-function: #3498db;
   --code-comment: #95a5a6;
   --code-number: #e74c3c;
+
+  /* Variables pour personnalisation des blocs de code */
+  --code-block-bg: var(--code-background);
+  --code-block-border: var(--border);
+  --code-block-text: var(--code-text);
+  --code-line-number-color: var(--text-muted);
+  --code-line-number-border: var(--border);
 
   --success: #2ecc71;
   --warning: #d4a017;
@@ -90,6 +113,13 @@
   --code-comment: #95a5a6;
   --code-number: #e74c3c;
 
+  /* Variables pour personnalisation des blocs de code */
+  --code-block-bg: var(--code-background);
+  --code-block-border: var(--border);
+  --code-block-text: var(--code-text);
+  --code-line-number-color: var(--text-muted);
+  --code-line-number-border: var(--border);
+
   --success: #4caf50;
   --warning: #ffd700;
   --error: #e74c3c;
@@ -119,7 +149,7 @@
 @theme {
   --font-display: "Instrument Serif", serif;
   --font-sans: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-mono: "Monaspace Krypton", monospace;
 
   --color-background: var(--background);
   --color-surface: var(--surface);
@@ -151,6 +181,12 @@
   --color-code-function: var(--code-function);
   --color-code-comment: var(--code-comment);
   --color-code-number: var(--code-number);
+
+  --color-code-block-bg: var(--code-block-bg);
+  --color-code-block-border: var(--code-block-border);
+  --color-code-block-text: var(--code-block-text);
+  --color-code-line-number-color: var(--code-line-number-color);
+  --color-code-line-number-border: var(--code-line-number-border);
 }
 
 /* Styles par défaut pour les balises HTML */
@@ -192,9 +228,9 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
-p {
+/* p {
   margin-bottom: 1.25rem;
-}
+} */
 
 a {
   color: var(--link);
@@ -216,15 +252,33 @@ code {
   border-radius: 0.25rem;
 }
 
+/* Les code inline ne doivent pas avoir les styles de parchemin */
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
 pre {
   font-family: var(--font-mono);
   font-size: 0.875rem;
-  background-color: var(--code-background);
-  color: var(--code-text);
-  padding: 1.25rem;
-  border-radius: 0.5rem;
+  background-color: var(--code-block-bg);
+  color: var(--code-block-text);
+  padding: 0;
+  border: 1px solid var(--code-block-border);
+  border-radius: 0.25rem;
   overflow-x: auto;
   margin: 1.5rem 0;
+  position: relative;
+}
+
+pre code {
+  display: block;
+  padding: 1rem;
+  background: transparent;
+  border-radius: 0;
+  overflow-x: auto;
+  position: relative;
 }
 
 blockquote {
@@ -250,62 +304,3 @@ hr {
   margin: 3rem 0;
 }
 
-/* Coloration syntaxique pour le Markdown */
-.markdown-content .token.comment,
-.markdown-content .token.prolog,
-.markdown-content .token.doctype,
-.markdown-content .token.cdata {
-  color: var(--code-comment);
-}
-
-.markdown-content .token.punctuation {
-  color: var(--text-secondary);
-}
-
-.markdown-content .token.namespace {
-  opacity: .7;
-}
-
-.markdown-content .token.property,
-.markdown-content .token.tag,
-.markdown-content .token.boolean,
-.markdown-content .token.number,
-.markdown-content .token.constant,
-.markdown-content .token.symbol,
-.markdown-content .token.deleted {
-  color: var(--code-number);
-}
-
-.markdown-content .token.selector,
-.markdown-content .token.attr-name,
-.markdown-content .token.string,
-.markdown-content .token.char,
-.markdown-content .token.builtin,
-.markdown-content .token.inserted {
-  color: var(--code-string);
-}
-
-.markdown-content .token.operator,
-.markdown-content .token.entity,
-.markdown-content .token.url,
-.language-css .token.string,
-.style .token.string {
-  color: var(--code-keyword);
-}
-
-.markdown-content .token.atrule,
-.markdown-content .token.attr-value,
-.markdown-content .token.keyword {
-  color: var(--code-keyword);
-}
-
-.markdown-content .token.function,
-.markdown-content .token.class-name {
-  color: var(--code-function);
-}
-
-.markdown-content .token.regex,
-.markdown-content .token.important,
-.markdown-content .token.variable {
-  color: var(--code-keyword);
-}
