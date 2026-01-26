@@ -1,7 +1,7 @@
-import { sveltekit } from '@sveltejs/kit/vite';
-import tailwindcss from '@tailwindcss/vite';
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
+import { fresh } from "@fresh/plugin-vite";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit()]
+  plugins: [fresh(), tailwindcss()],
 });
