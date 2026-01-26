@@ -8,7 +8,7 @@ export default define.page(async function PostPage(ctx) {
   const post = await getPost(slug);
 
   if (!post) {
-    return ctx.renderNotFound();
+    return new Response(null, { status: 404 });
   }
 
   const html = render(post.content);
@@ -32,9 +32,9 @@ export default define.page(async function PostPage(ctx) {
         <em class="text-text-secondary block mb-4">{post.description}</em>
 
         {post.category.length > 0 && (
-          <div class="flex flex-wrap gap-2 mb-4">
+          <div class="flex flex-wrap gap-2">
             {post.category.map((cat) => (
-              <span class="inline-block px-3 py-1 rounded-sm text-sm font-mono bg-accent text-white">
+              <span class="inline-block px-2 rounded-sm text-xs font-mono bg-link text-white">
                 {cat}
               </span>
             ))}

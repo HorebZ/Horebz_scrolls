@@ -1,6 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 
-type Theme = "light" | "dark";
+type Theme = "light" | "dark" | "mordor";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("light");
@@ -31,19 +31,29 @@ export default function ThemeToggle() {
       aria-label="Changer de thème"
       type="button"
     >
-      {theme === "dark"
-        ? (
+      {theme === "dark" &&
+        (
           <img
-            src="/assets/on-ring-light.svg"
-            alt="On ring light"
+            src="/assets/one-ring-light.svg"
+            alt="One ring light"
             width="20"
             height="20"
           />
-        )
-        : (
+        )}
+      {theme === "light" &&
+        (
           <img
-            src="/assets/on-ring-dark.svg"
-            alt="On ring dark"
+            src="/assets/one-ring-dark.svg"
+            alt="One ring dark"
+            width="20"
+            height="20"
+          />
+        )}
+      {theme === "mordor" &&
+        (
+          <img
+            src="/assets/one-ring-fire.svg"
+            alt="One ring fire"
             width="20"
             height="20"
           />

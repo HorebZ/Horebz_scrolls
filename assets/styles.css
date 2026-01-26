@@ -96,6 +96,26 @@
   --info: #00b4ff;
 }
 
+.mordor {
+  --background: #121212;
+  --surface: #1e1e1e;
+  --surface-elevated: #2a2a2a;
+
+  --primary: red;
+  --primary-light: orange;
+  --primary-dark: yellow;
+
+  --link: red;
+  --link-hover: orange;
+  --link-visited: red;
+
+  --accent: red;
+  --accent-hover: orange;
+
+  --text-primary: white;
+  --text-secondary: gray;
+}
+
 @theme {
   --font-display: "Instrument Serif", serif;
   --font-sans: "Inter", sans-serif;
@@ -123,6 +143,14 @@
   --color-link: var(--link);
   --color-link-hover: var(--link-hover);
   --color-link-visited: var(--link-visited);
+
+  --color-code-background: var(--code-background);
+  --color-code-text: var(--code-text);
+  --color-code-keyword: var(--code-keyword);
+  --color-code-string: var(--code-string);
+  --color-code-function: var(--code-function);
+  --color-code-comment: var(--code-comment);
+  --color-code-number: var(--code-number);
 }
 
 /* Styles par défaut pour les balises HTML */
