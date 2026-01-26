@@ -13,3 +13,4 @@ vendor/
 
 # personal files
 .notes/
+.DS_Store

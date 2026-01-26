@@ -228,9 +228,9 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
-/* p {
+p {
   margin-bottom: 1.25rem;
-} */
+}
 
 a {
   color: var(--link);
@@ -304,3 +304,13 @@ hr {
   margin: 3rem 0;
 }
 
+/* Masquer les liens d'ancrage générés par @deno/gfm */
+.markdown-content h1 .anchor,
+.markdown-content h2 .anchor,
+.markdown-content h3 .anchor,
+.markdown-content h4 .anchor,
+.markdown-content h5 .anchor,
+.markdown-content h6 .anchor,
+.markdown-content .anchor {
+  display: none;
+}

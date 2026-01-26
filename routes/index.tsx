@@ -21,7 +21,7 @@ export default define.page(async function Home(ctx) {
                 day: "numeric",
               })}
             </p>
-            <h2 class="text-2xl font-bold">
+            <h2 class="text-2xl font-bold mt-0">
               <a
                 href={`/blog/${post.slug}`}
                 class="font-display hover:underline text-text-primary"
