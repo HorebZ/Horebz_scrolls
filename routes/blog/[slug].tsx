@@ -34,7 +34,7 @@ export default define.page(async function PostPage(ctx) {
         {post.category.length > 0 && (
           <div class="flex flex-wrap gap-2">
             {post.category.map((cat) => (
-              <span class="inline-block px-2 rounded-sm text-xs font-mono bg-link text-white">
+              <span class="inline-block px-2 rounded-sm text-xs font-mono bg-category text-white">
                 {cat}
               </span>
             ))}

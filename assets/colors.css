@@ -1,0 +1,73 @@
+/*
+  ============================================
+  COULEURS NOMINATIVES - Système de couleurs
+  ============================================
+
+  Toutes les couleurs sont nommées de manière claire
+  pour faciliter leur utilisation et leur modification.
+*/
+
+:root {
+  /* Couleurs de base - Gris et blancs */
+  --gris-mithril: #6b7a8f;        /* Gris principal */
+  --gris-mithril-clair: #8a9baf;  /* Gris clair */
+  --gris-mithril-fonce: #4a5a6f;  /* Gris foncé */
+
+  --blanc-gondor: #ffffff;        /* Blanc pur */
+  --blanc-gondor-clair: #f8f8f8;  /* Blanc cassé clair */
+  --gris-gondor: #f0f0f0;         /* Gris très clair */
+
+  /* Couleurs sombres - Fond */
+  --noir-mordor: #121212;         /* Noir profond */
+  --gris-anthracite: #1e1e1e;     /* Gris anthracite */
+  --gris-anthracite-clair: #2a2a2a; /* Gris anthracite clair */
+
+  /* Couleurs d'accent - Bleus */
+  --bleu-gis-mithril: #4f9efe;    /* Bleu électrique doux */
+  --bleu-gis-mithril-fonce: #3d8eed; /* Bleu électrique foncé */
+  --bleu-neon-attenue: #00b4ff;   /* Bleu néon atténué */
+  --bleu-neon-attenue-fonce: #0099dd; /* Bleu néon atténué foncé */
+  --bleu-info: #3498db;            /* Bleu pour les infos */
+
+  /* Couleurs d'accent - Verts */
+  --vert-lothlorien: #3a5f0b;     /* Vert forêt Lothlórien */
+  --vert-elfique: #4caf50;        /* Vert elfique désaturé */
+  --vert-elfique-clair: #66bb6a;  /* Vert elfique clair */
+  --vert-elfique-fonce: #388e3c;  /* Vert elfique foncé */
+  --vert-success: #2ecc71;         /* Vert pour le succès */
+
+  /* Couleurs d'accent - Or et jaunes */
+  --or-rohan: #d4a017;             /* Or vieilli de Rohan */
+  --or-mat: #ffd700;               /* Doré mat */
+
+  /* Couleurs d'accent - Rouges */
+  --rouge-mordor: #e74c3c;         /* Rouge (Mordor) */
+  --rouge-error: #e74c3c;          /* Rouge pour les erreurs */
+
+  /* Couleurs d'accent - Orange */
+  --orange-mordor: #ff6600;        /* Orange (Mordor) */
+
+  /* Couleurs d'accent - Violets */
+  --violet-profond: #6a4c93;       /* Violet profond */
+
+  /* Couleurs de texte */
+  --texte-noir: #121212;           /* Texte noir */
+  --texte-blanc: #f8f8f8;          /* Texte blanc */
+  --texte-gris: #4a5a6f;           /* Texte gris */
+  --texte-gris-clair: #6b7a8f;     /* Texte gris clair */
+  --texte-gris-anthracite: #b0b0b0; /* Texte gris anthracite */
+  --texte-gris-anthracite-clair: #808080; /* Texte gris anthracite clair */
+
+  /* Couleurs de bordure */
+  --bordure-claire: #e0e0e0;       /* Bordure claire */
+  --bordure-tres-claire: #f0f0f0;  /* Bordure très claire */
+  --bordure-anthracite: #333333;   /* Bordure anthracite */
+  --bordure-anthracite-claire: #2a2a2a; /* Bordure anthracite claire */
+
+  /* Couleurs de code */
+  --code-fond-clair: #f5f5f5;      /* Fond de code clair */
+  --code-fond-sombre: #282c34;     /* Fond de code sombre */
+  --code-texte-clair: #121212;     /* Texte de code clair */
+  --code-texte-sombre: #f8f8f8;     /* Texte de code sombre */
+  --code-commentaire: #95a5a6;     /* Couleur pour les commentaires */
+}

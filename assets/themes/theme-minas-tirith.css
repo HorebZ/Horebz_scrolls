@@ -1,0 +1,61 @@
+/*
+  ============================================
+  MINAS TIRITH - Thème clair
+  ============================================
+*/
+
+:root {
+  /* Couleurs de fond */
+  --background: var(--blanc-gondor-clair);
+  --surface: var(--blanc-gondor);
+  --surface-elevated: var(--gris-gondor);
+
+  /* Couleurs principales */
+  --primary: var(--gris-mithril);
+  --primary-light: var(--gris-mithril-clair);
+  --primary-dark: var(--gris-mithril-fonce);
+
+  /* Couleurs d'accent */
+  --accent: var(--bleu-gis-mithril);
+  --accent-hover: var(--bleu-gis-mithril-fonce);
+
+  /* Couleurs de texte */
+  --text-primary: var(--texte-noir);
+  --text-secondary: var(--texte-gris);
+  --text-muted: var(--texte-gris-clair);
+  --text-inverse: var(--texte-blanc);
+
+  /* Couleurs de bordure */
+  --border: var(--bordure-claire);
+  --border-light: var(--bordure-tres-claire);
+
+  /* Couleurs de liens */
+  --link: var(--bleu-gis-mithril);
+  --link-hover: var(--bleu-gis-mithril-fonce);
+  --link-visited: var(--gris-mithril);
+
+  /* Couleurs cathégories */
+  --category: var(--link-visited);
+
+  /* Couleurs de code */
+  --code-background: var(--code-fond-clair);
+  --code-text: var(--code-texte-clair);
+  --code-keyword: var(--or-rohan);
+  --code-string: var(--vert-success);
+  --code-function: var(--bleu-info);
+  --code-comment: var(--code-commentaire);
+  --code-number: var(--rouge-error);
+
+  /* Variables pour personnalisation des blocs de code */
+  --code-block-bg: var(--code-background);
+  --code-block-border: var(--border);
+  --code-block-text: var(--code-text);
+  --code-line-number-color: var(--text-muted);
+  --code-line-number-border: var(--border);
+
+  /* Couleurs de statut */
+  --success: var(--vert-success);
+  --warning: var(--or-rohan);
+  --error: var(--rouge-error);
+  --info: var(--bleu-info);
+}

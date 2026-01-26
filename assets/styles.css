@@ -1,5 +1,15 @@
+/* ============================================
+   STYLES PRINCIPAUX
+   ============================================
+
+   Ce fichier importe tous les fichiers de couleurs et thèmes,
+   ainsi que les styles généraux de l'application.
+*/
+
+/* Import des polices Google */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
+/* Définition des polices locales */
 @font-face {
   font-family: "Instrument Serif";
   font-style: normal;
@@ -32,120 +42,18 @@
   src: url("/fonts/MonaspaceKrypton-Italic.woff2") format("woff2");
 }
 
+/* Import de Tailwind CSS */
 @import "tailwindcss";
 
-:root {
-  /* Thème clair - Minas Tirith */
-  --background: #f8f8f8;
-  --surface: #ffffff;
-  --surface-elevated: #f0f0f0;
+/* Import des couleurs nominatives */
+@import "./colors.css";
 
-  --primary: #6b7a8f;
-  --primary-light: #8a9baf;
-  --primary-dark: #4a5a6f;
+/* Import des thèmes */
+@import "./themes/theme-minas-tirith.css";
+@import "./themes/theme-minas-morgul.css";
+@import "./themes/theme-mordor.css";
 
-  --accent: #4f9efe;
-  --accent-hover: #3d8eed;
-
-  --text-primary: #121212;
-  --text-secondary: #4a5a6f;
-  --text-muted: #6b7a8f;
-  --text-inverse: #f8f8f8;
-
-  --border: #e0e0e0;
-  --border-light: #f0f0f0;
-
-  --link: #4f9efe;
-  --link-hover: #3d8eed;
-  --link-visited: #6b7a8f;
-
-  --code-background: #f5f5f5;
-  --code-text: #121212;
-  --code-keyword: #d4a017;
-  --code-string: #2ecc71;
-  --code-function: #3498db;
-  --code-comment: #95a5a6;
-  --code-number: #e74c3c;
-
-  /* Variables pour personnalisation des blocs de code */
-  --code-block-bg: var(--code-background);
-  --code-block-border: var(--border);
-  --code-block-text: var(--code-text);
-  --code-line-number-color: var(--text-muted);
-  --code-line-number-border: var(--border);
-
-  --success: #2ecc71;
-  --warning: #d4a017;
-  --error: #e74c3c;
-  --info: #3498db;
-}
-
-.dark {
-  /* Thème sombre - Minas Morgul */
-  --background: #121212;
-  --surface: #1e1e1e;
-  --surface-elevated: #2a2a2a;
-
-  --primary: #4caf50;
-  --primary-light: #66bb6a;
-  --primary-dark: #388e3c;
-
-  --accent: #00b4ff;
-  --accent-hover: #0099dd;
-
-  --text-primary: #f8f8f8;
-  --text-secondary: #b0b0b0;
-  --text-muted: #808080;
-  --text-inverse: #121212;
-
-  --border: #333333;
-  --border-light: #2a2a2a;
-
-  --link: #00b4ff;
-  --link-hover: #0099dd;
-  --link-visited: #4caf50;
-
-  --code-background: #282c34;
-  --code-text: #f8f8f8;
-  --code-keyword: #ffd700;
-  --code-string: #2ecc71;
-  --code-function: #3498db;
-  --code-comment: #95a5a6;
-  --code-number: #e74c3c;
-
-  /* Variables pour personnalisation des blocs de code */
-  --code-block-bg: var(--code-background);
-  --code-block-border: var(--border);
-  --code-block-text: var(--code-text);
-  --code-line-number-color: var(--text-muted);
-  --code-line-number-border: var(--border);
-
-  --success: #4caf50;
-  --warning: #ffd700;
-  --error: #e74c3c;
-  --info: #00b4ff;
-}
-
-.mordor {
-  --background: #121212;
-  --surface: #1e1e1e;
-  --surface-elevated: #2a2a2a;
-
-  --primary: red;
-  --primary-light: orange;
-  --primary-dark: yellow;
-
-  --link: red;
-  --link-hover: orange;
-  --link-visited: red;
-
-  --accent: red;
-  --accent-hover: orange;
-
-  --text-primary: white;
-  --text-secondary: gray;
-}
-
+/* Configuration Tailwind avec les variables CSS */
 @theme {
   --font-display: "Instrument Serif", serif;
   --font-sans: "Inter", sans-serif;
@@ -158,6 +66,8 @@
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
   --color-primary-dark: var(--primary-dark);
+
+  --color-category: var(--category);
 
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
@@ -188,6 +98,10 @@
   --color-code-line-number-color: var(--code-line-number-color);
   --color-code-line-number-border: var(--code-line-number-border);
 }
+
+/* ============================================
+   STYLES GÉNÉRAUX
+   ============================================ */
 
 /* Styles par défaut pour les balises HTML */
 body {
@@ -296,6 +210,33 @@ ul, ol {
 
 li {
   margin-bottom: 0.5rem;
+}
+
+/* Styles spécifiques pour les listes dans le contenu markdown */
+.markdown-content ul {
+  list-style-type: disc;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-content ul li {
+  display: list-item;
+  list-style-position: outside;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.markdown-content ol {
+  list-style-type: decimal;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-content ol li {
+  display: list-item;
+  list-style-position: outside;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
 }
 
 hr {

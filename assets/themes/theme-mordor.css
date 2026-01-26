@@ -1,0 +1,30 @@
+/*
+  ============================================
+  MORDOR - Thème des ténèbres - EASTER EGG
+  ============================================
+*/
+
+.mordor {
+  /* Couleurs de fond */
+  --background: var(--noir-mordor);
+  --surface: var(--gris-anthracite);
+  --surface-elevated: var(--gris-anthracite-clair);
+
+  /* Couleurs principales */
+  --primary: var(--rouge-mordor);
+  --primary-light: var(--orange-mordor);
+  --primary-dark: var(--or-mat);
+
+  /* Couleurs d'accent */
+  --accent: var(--rouge-mordor);
+  --accent-hover: var(--orange-mordor);
+
+  /* Couleurs de texte */
+  --text-primary: var(--texte-blanc);
+  --text-secondary: var(--texte-gris-anthracite-clair);
+
+  /* Couleurs de liens */
+  --link: var(--rouge-mordor);
+  --link-hover: var(--orange-mordor);
+  --link-visited: var(--rouge-mordor);
+}
