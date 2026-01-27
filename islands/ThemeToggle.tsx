@@ -1,20 +1,19 @@
 import { useEffect, useState } from "preact/hooks";
-
-type Theme = "light" | "dark" | "mordor";
+import { type Theme, THEMES } from "../utils/theme.model.ts";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>(THEMES.light);
 
   useEffect(() => {
     const isDark = document.documentElement.classList.contains("dark");
-    setTheme(isDark ? "dark" : "light");
+    setTheme(isDark ? THEMES.dark : THEMES.light);
   }, []);
 
   const toggle = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme = theme === THEMES.light ? THEMES.dark : THEMES.light;
     setTheme(newTheme);
 
-    if (newTheme === "dark") {
+    if (newTheme === THEMES.dark) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
@@ -31,7 +30,7 @@ export default function ThemeToggle() {
       aria-label="Changer de thème"
       type="button"
     >
-      {theme === "dark" &&
+      {theme === THEMES.dark &&
         (
           <img
             src="/assets/one-ring-light.svg"
@@ -40,7 +39,7 @@ export default function ThemeToggle() {
             height="20"
           />
         )}
-      {theme === "light" &&
+      {theme === THEMES.light &&
         (
           <img
             src="/assets/one-ring-dark.svg"
@@ -49,7 +48,7 @@ export default function ThemeToggle() {
             height="20"
           />
         )}
-      {theme === "mordor" &&
+      {theme === THEMES.mordor &&
         (
           <img
             src="/assets/one-ring-fire.svg"

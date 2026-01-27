@@ -1,15 +1,9 @@
 import { define } from "../utils.ts";
+import { themeClass } from "../utils/theme.model.ts";
 
 export default define.page(function App({ Component, state }) {
   return (
-    <html
-      lang="fr"
-      class={state.theme === "dark"
-        ? "dark"
-        : state.theme === "mordor"
-        ? "mordor"
-        : ""}
-    >
+    <html lang="fr" class={themeClass(state.theme)}>
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
