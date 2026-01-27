@@ -5,14 +5,14 @@ export default define.layout(function Layout({ Component }) {
   return (
     <div class="flex flex-col min-h-screen">
       <header class="border-b border-border py-4 bg-surface transition-colors duration-300">
-        <div class="max-w-3xl mx-auto px-4 flex justify-between items-center">
+        <div class="max-w-3xl mx-auto px-4 flex justify-between md:items-center">
           <a href="/" class="flex items-center gap-2">
             <img
               src="/assets/logo.png"
               alt="Horeb'z Scrolls"
               class="w-10 h-10 rounded-full"
             />
-            <span class="text-xl font-bold text-text-primary">
+            <span class="hidden sm:inline text-xl font-bold text-text-primary">
               Horeb'z Scrolls
             </span>
           </a>
@@ -21,19 +21,19 @@ export default define.layout(function Layout({ Component }) {
             <div class="flex items-center gap-4">
               <a
                 href="/about"
-                class="text-text-secondary hover:text-accent transition-colors"
+                class="text-text-primary! hover:text-accent transition-colors"
               >
                 A propos
               </a>
               <a
                 href="/404"
-                class="text-text-secondary hover:text-accent transition-colors"
+                class="text-text-primary! hover:text-accent transition-colors"
               >
                 404
               </a>
               <a
                 href="https://github.com/HorebZ"
-                class="text-text-secondary hover:text-accent transition-colors"
+                class="text-text-primary! hover:text-accent transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
