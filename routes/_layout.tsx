@@ -20,7 +20,13 @@ export default define.layout(function Layout({ Component }) {
           <nav class="flex items-center gap-6">
             <div class="flex items-center gap-4">
               <a
-                href="/404"
+                href="/_about"
+                class="text-text-secondary hover:text-accent transition-colors"
+              >
+                A propos
+              </a>
+              <a
+                href="/_404"
                 class="text-text-secondary hover:text-accent transition-colors"
               >
                 404
