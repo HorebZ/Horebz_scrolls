@@ -5,7 +5,7 @@ import { createDefine } from "fresh";
  * data among middlewares, layouts and routes.
  */
 export interface State {
-  theme: "light" | "dark";
+  theme: "light" | "dark" | "mordor";
 }
 
 export const define = createDefine<State>();

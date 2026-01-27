@@ -6,42 +6,42 @@
 
 .dark {
   /* Couleurs de fond */
-  --background: var(--noir-mordor);
-  --surface: var(--gris-anthracite);
-  --surface-elevated: var(--gris-anthracite-clair);
+  --background: var(--gris-mithril-950);
+  --surface: var(--gris-mithril-900);
+  --surface-elevated: var(--gris-mithril-850);
 
   /* Couleurs principales */
-  --primary: var(--vert-elfique);
-  --primary-light: var(--vert-elfique-clair);
-  --primary-dark: var(--vert-elfique-fonce);
+  --primary: var(--vert-elfique-600);
+  --primary-light: var(--vert-elfique-400);
+  --primary-dark: var(--vert-elfique-800);
 
   /* Couleurs d'accent */
-  --accent: var(--bleu-neon-attenue);
-  --accent-hover: var(--bleu-neon-attenue-fonce);
+  --accent: var(--bleu-neon-attenue-400);
+  --accent-hover: var(--bleu-neon-attenue-500);
 
   /* Couleurs de texte */
-  --text-primary: var(--texte-blanc);
-  --text-secondary: var(--texte-gris-anthracite);
-  --text-muted: var(--texte-gris-anthracite-clair);
-  --text-inverse: var(--texte-noir);
+  --text-primary: var(--blanc-perle);
+  --text-secondary: var(--gris-mithril-300);
+  --text-muted: var(--gris-mithril-500);
+  --text-inverse: var(--gris-mithril-950);
 
   /* Couleurs de bordure */
-  --border: var(--bordure-anthracite);
-  --border-light: var(--bordure-anthracite-claire);
+  --border: var(--gris-mithril-800);
+  --border-light: var(--gris-mithril-850);
 
   /* Couleurs de liens */
-  --link: var(--bleu-neon-attenue);
-  --link-hover: var(--bleu-neon-attenue-fonce);
-  --link-visited: var(--vert-elfique);
+  --link: var(--bleu-neon-attenue-400);
+  --link-hover: var(--bleu-neon-attenue-500);
+  --link-visited: var(--vert-elfique-600);
 
   /* Couleurs de code */
-  --code-background: var(--code-fond-sombre);
-  --code-text: var(--code-texte-sombre);
-  --code-keyword: var(--or-mat);
-  --code-string: var(--vert-success);
-  --code-function: var(--bleu-info);
-  --code-comment: var(--code-commentaire);
-  --code-number: var(--rouge-error);
+  --code-background: var(--gris-mithril-800);
+  --code-text: var(--blanc-perle);
+  --code-keyword: var(--or-rohan-400);
+  --code-string: var(--vert-success-500);
+  --code-function: var(--bleu-gis-mithril-600);
+  --code-comment: var(--gris-mithril-400);
+  --code-number: var(--rouge-mordor-600);
 
   /* Variables pour personnalisation des blocs de code */
   --code-block-bg: var(--code-background);
@@ -51,8 +51,8 @@
   --code-line-number-border: var(--border);
 
   /* Couleurs de statut */
-  --success: var(--vert-elfique);
-  --warning: var(--or-mat);
-  --error: var(--rouge-error);
-  --info: var(--bleu-neon-attenue);
+  --success: var(--vert-elfique-600);
+  --warning: var(--or-rohan-400);
+  --error: var(--rouge-mordor-600);
+  --info: var(--bleu-neon-attenue-400);
 }

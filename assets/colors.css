@@ -2,72 +2,56 @@
   ============================================
   COULEURS NOMINATIVES - Système de couleurs
   ============================================
-
-  Toutes les couleurs sont nommées de manière claire
-  pour faciliter leur utilisation et leur modification.
 */
 
 :root {
-  /* Couleurs de base - Gris et blancs */
-  --gris-mithril: #6b7a8f;        /* Gris principal */
-  --gris-mithril-clair: #8a9baf;  /* Gris clair */
-  --gris-mithril-fonce: #4a5a6f;  /* Gris foncé */
+  --blanc-gondor: #ffffff;
+  --blanc-gondor-clair: #f8f8f8;
+  --blanc-perle: #f8f8f8;
 
-  --blanc-gondor: #ffffff;        /* Blanc pur */
-  --blanc-gondor-clair: #f8f8f8;  /* Blanc cassé clair */
-  --gris-gondor: #f0f0f0;         /* Gris très clair */
+  --gris-mithril-50: #f5f5f5;
+  --gris-mithril-100: #f0f0f0;
+  --gris-mithril-200: #e0e0e0;
+  --gris-mithril-300: #b0b0b0;
+  --gris-mithril-400: #95a5a6;
+  --gris-mithril-500: #808080;
+  --gris-mithril-600: #6b7a8f;
+  --gris-mithril-700: #4a5a6f;
+  --gris-mithril-800: #333333;
+  --gris-mithril-850: #2a2a2a;
+  --gris-mithril-900: #1e1e1e;
+  --gris-mithril-950: #121212;
 
-  /* Couleurs sombres - Fond */
-  --noir-mordor: #121212;         /* Noir profond */
-  --gris-anthracite: #1e1e1e;     /* Gris anthracite */
-  --gris-anthracite-clair: #2a2a2a; /* Gris anthracite clair */
+  --vert-elfique-50: #d8f3dc;
+  --vert-elfique-100: #b7e4c7;
+  --vert-elfique-200: #95d5b2;
+  --vert-elfique-300: #74c69d;
+  --vert-elfique-400: #66bb6a;
+  --vert-elfique-500: #52b788;
+  --vert-elfique-600: #4caf50;
+  --vert-elfique-700: #40916c;
+  --vert-elfique-800: #388e3c;
+  --vert-elfique-900: #2d6a4f;
+  --vert-elfique-950: #1b4332;
+  --vert-elfique-975: #081c15;
 
-  /* Couleurs d'accent - Bleus */
-  --bleu-gis-mithril: #4f9efe;    /* Bleu électrique doux */
-  --bleu-gis-mithril-fonce: #3d8eed; /* Bleu électrique foncé */
-  --bleu-neon-attenue: #00b4ff;   /* Bleu néon atténué */
-  --bleu-neon-attenue-fonce: #0099dd; /* Bleu néon atténué foncé */
-  --bleu-info: #3498db;            /* Bleu pour les infos */
+  --bleu-gis-mithril-400: #4f9efe;
+  --bleu-gis-mithril-500: #3d8eed;
+  --bleu-gis-mithril-600: #3498db;
 
-  /* Couleurs d'accent - Verts */
-  --vert-lothlorien: #3a5f0b;     /* Vert forêt Lothlórien */
-  --vert-elfique: #4caf50;        /* Vert elfique désaturé */
-  --vert-elfique-clair: #66bb6a;  /* Vert elfique clair */
-  --vert-elfique-fonce: #388e3c;  /* Vert elfique foncé */
-  --vert-success: #2ecc71;         /* Vert pour le succès */
+  --bleu-neon-attenue-400: #00b4ff;
+  --bleu-neon-attenue-500: #0099dd;
 
-  /* Couleurs d'accent - Or et jaunes */
-  --or-rohan: #d4a017;             /* Or vieilli de Rohan */
-  --or-mat: #ffd700;               /* Doré mat */
+  --rouge-mordor-400: #ff6600;
+  --rouge-mordor-500: #e85d04;
+  --rouge-mordor-600: #e74c3c;
+  --rouge-mordor-700: #dc2f02;
 
-  /* Couleurs d'accent - Rouges */
-  --rouge-mordor: #e74c3c;         /* Rouge (Mordor) */
-  --rouge-error: #e74c3c;          /* Rouge pour les erreurs */
+  --or-rohan-400: #ffd700;
+  --or-rohan-500: #d4a017;
 
-  /* Couleurs d'accent - Orange */
-  --orange-mordor: #ff6600;        /* Orange (Mordor) */
+  --violet-profond-600: #6a4c93;
 
-  /* Couleurs d'accent - Violets */
-  --violet-profond: #6a4c93;       /* Violet profond */
-
-  /* Couleurs de texte */
-  --texte-noir: #121212;           /* Texte noir */
-  --texte-blanc: #f8f8f8;          /* Texte blanc */
-  --texte-gris: #4a5a6f;           /* Texte gris */
-  --texte-gris-clair: #6b7a8f;     /* Texte gris clair */
-  --texte-gris-anthracite: #b0b0b0; /* Texte gris anthracite */
-  --texte-gris-anthracite-clair: #808080; /* Texte gris anthracite clair */
-
-  /* Couleurs de bordure */
-  --bordure-claire: #e0e0e0;       /* Bordure claire */
-  --bordure-tres-claire: #f0f0f0;  /* Bordure très claire */
-  --bordure-anthracite: #333333;   /* Bordure anthracite */
-  --bordure-anthracite-claire: #2a2a2a; /* Bordure anthracite claire */
-
-  /* Couleurs de code */
-  --code-fond-clair: #f5f5f5;      /* Fond de code clair */
-  --code-fond-sombre: #282c34;     /* Fond de code sombre */
-  --code-texte-clair: #121212;     /* Texte de code clair */
-  --code-texte-sombre: #f8f8f8;     /* Texte de code sombre */
-  --code-commentaire: #95a5a6;     /* Couleur pour les commentaires */
+  --vert-lothlorien-900: #3a5f0b;
+  --vert-success-500: #2ecc71;
 }

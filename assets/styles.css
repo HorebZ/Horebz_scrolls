@@ -1,16 +1,13 @@
-/* ============================================
-   STYLES PRINCIPAUX
-   ============================================
-
-   Ce fichier importe tous les fichiers de couleurs et thèmes,
-   ainsi que les styles généraux de l'application.
+/*
+  ============================================
+  STYLES PRINCIPAUX
+  ============================================
 */
 
-/* Import des polices depuis CDN pour éviter le FOUT */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap");
-
-/* Monaspace Krypton via jsDelivr CDN */
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=UnifrakturCook:wght@700&display=swap');
 @font-face {
   font-family: "Monaspace Krypton";
   font-style: normal;
@@ -27,18 +24,14 @@
   src: url("https://cdn.jsdelivr.net/npm/@fontsource/monaspace-krypton@5.0.0/files/monaspace-krypton-latin-400-italic.woff2") format("woff2");
 }
 
-/* Import de Tailwind CSS */
 @import "tailwindcss";
 
-/* Import des couleurs nominatives */
 @import "./colors.css";
 
-/* Import des thèmes */
 @import "./themes/theme-minas-tirith.css";
 @import "./themes/theme-minas-morgul.css";
 @import "./themes/theme-mordor.css";
 
-/* Configuration Tailwind avec les variables CSS */
 @theme {
   --font-display: "Instrument Serif", serif;
   --font-sans: "Inter", sans-serif;
@@ -84,11 +77,6 @@
   --color-code-line-number-border: var(--code-line-number-border);
 }
 
-/* ============================================
-   STYLES GÉNÉRAUX
-   ============================================ */
-
-/* Styles par défaut pour les balises HTML */
 body {
   font-family: var(--font-sans);
   font-size: 16px;
@@ -151,7 +139,6 @@ code {
   border-radius: 0.25rem;
 }
 
-/* Les code inline ne doivent pas avoir les styles de parchemin */
 pre code {
   background-color: transparent;
   padding: 0;
@@ -197,7 +184,6 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* Styles spécifiques pour les listes dans le contenu markdown */
 .markdown-content ul {
   list-style-type: disc;
   margin-bottom: 1.25rem;
