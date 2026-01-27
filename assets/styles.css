@@ -6,40 +6,25 @@
    ainsi que les styles généraux de l'application.
 */
 
-/* Import des polices Google */
+/* Import des polices depuis CDN pour éviter le FOUT */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap");
 
-/* Définition des polices locales */
+/* Monaspace Krypton via jsDelivr CDN */
 @font-face {
-  font-family: "Instrument Serif";
+  font-family: "Monaspace Krypton";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/InstrumentSerif-Regular.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/npm/@fontsource/monaspace-krypton@5.0.0/files/monaspace-krypton-latin-400-normal.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Instrument Serif";
+  font-family: "Monaspace Krypton";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/InstrumentSerif-Italic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Monaspace Krypton";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/MonaspaceKrypton-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Monaspace Krypton";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/MonaspaceKrypton-Italic.woff2") format("woff2");
+  src: url("https://cdn.jsdelivr.net/npm/@fontsource/monaspace-krypton@5.0.0/files/monaspace-krypton-latin-400-italic.woff2") format("woff2");
 }
 
 /* Import de Tailwind CSS */
