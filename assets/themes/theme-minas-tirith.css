@@ -8,6 +8,8 @@
   /* Couleurs de fond */
   --background: var(--blanc-gondor-clair);
   --surface: var(--blanc-gondor);
+  /* --background: var(--blanc-gondor);
+  --surface: var(--blanc-gondor-clair); */
   --surface-elevated: var(--gris-mithril-100);
 
   /* Couleurs principales */
@@ -16,7 +18,7 @@
   --primary-dark: var(--gris-mithril-700);
 
   /* Couleurs d'accent */
-  --accent: var(--bleu-gis-mithril-400);
+  --accent: var(--vert-elfique-700);
   --accent-hover: var(--bleu-gis-mithril-500);
 
   /* Couleurs de texte */
