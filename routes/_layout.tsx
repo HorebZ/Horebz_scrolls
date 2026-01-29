@@ -46,7 +46,7 @@ export default define.layout(function Layout({ Component }) {
       </header>
 
       <main class="bg-background min-h-screen transition-colors duration-300">
-        <div class="max-w-3xl mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto px-4">
           <Component />
         </div>
       </main>
