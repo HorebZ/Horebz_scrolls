@@ -13,7 +13,7 @@ export default define.page(async function Home(ctx) {
 
       <div class="space-y-8">
         {posts.map((post: Post) => (
-          <article class="p-6 shadow-sm border border-border bg-surface hover:shadow-md transition-shadow">
+          <article class="p-6 border border-border bg-surface">
             <p class="text-sm text-text-muted">
               {post.date.toLocaleDateString("fr-FR", {
                 year: "numeric",

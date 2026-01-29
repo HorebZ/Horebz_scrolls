@@ -34,7 +34,7 @@ export default define.page(async function PostPage(ctx) {
         {post.category.length > 0 && (
           <div class="flex flex-wrap gap-2">
             {post.category.map((cat) => (
-              <span class="inline-block px-2 rounded-sm text-xs font-mono bg-category text-white">
+              <span class="inline-block px-3 rounded-sm text-xs italic bg-category text-text-inverse theme-dark:text-text-primary">
                 {cat}
               </span>
             ))}
@@ -48,7 +48,7 @@ export default define.page(async function PostPage(ctx) {
       />
 
       <footer class="mt-12 pt-8 border-t border-border">
-        <a href="/" class="text-link hover:text-link-hover transition-colors">
+        <a href="/" class="hover:text-accent transition-colors">
           ← Mes autres <s>brouillons</s> articles
         </a>
       </footer>
