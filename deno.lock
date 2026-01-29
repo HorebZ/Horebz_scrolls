@@ -2,10 +2,12 @@
   "version": "5",
   "specifiers": {
     "jsr:@deno/esbuild-plugin@^1.2.0": "1.2.1",
+    "jsr:@deno/gfm@*": "0.11.0",
     "jsr:@deno/gfm@0.11": "0.11.0",
     "jsr:@deno/gfm@0.11.0": "0.11.0",
     "jsr:@deno/loader@~0.3.10": "0.3.11",
     "jsr:@deno/loader@~0.3.2": "0.3.11",
+    "jsr:@denosaurs/emoji@*": "0.3.1",
     "jsr:@denosaurs/emoji@~0.3.1": "0.3.1",
     "jsr:@fresh/build-id@1": "1.0.1",
     "jsr:@fresh/core@2": "2.2.0",
@@ -43,6 +45,7 @@
     "npm:@preact/signals@^2.2.1": "2.6.1_preact@10.28.2",
     "npm:@preact/signals@^2.5.0": "2.6.1_preact@10.28.2",
     "npm:@prefresh/vite@^2.4.8": "2.4.11_preact@10.28.2_vite@7.3.1__picomatch@4.0.3",
+    "npm:@rollup/plugin-json@^6.1.0": "6.1.0_rollup@4.56.0",
     "npm:@tailwindcss/vite@^4.1.12": "4.1.18_vite@7.3.1__picomatch@4.0.3",
     "npm:esbuild-wasm@~0.25.11": "0.25.12",
     "npm:esbuild@0.25.7": "0.25.7",
@@ -76,7 +79,7 @@
     "@deno/gfm@0.11.0": {
       "integrity": "ddadbfca6c1281729783612e4b0b2166b6543c1c49cc106b80911f4dc4087abc",
       "dependencies": [
-        "jsr:@denosaurs/emoji",
+        "jsr:@denosaurs/emoji@~0.3.1",
         "npm:github-slugger",
         "npm:he",
         "npm:katex",
@@ -861,9 +864,19 @@
         "@prefresh/babel-plugin",
         "@prefresh/core",
         "@prefresh/utils",
-        "@rollup/pluginutils",
+        "@rollup/pluginutils@4.2.1",
         "preact",
         "vite"
+      ]
+    },
+    "@rollup/plugin-json@6.1.0_rollup@4.56.0": {
+      "integrity": "sha512-EGI2te5ENk1coGeADSIwZ7G2Q8CJS2sF120T7jLw4xFw9n7wIOXHo+kIYRAoVpJAN+kmqZSoO3Fp4JtoNF4ReA==",
+      "dependencies": [
+        "@rollup/pluginutils@5.3.0_rollup@4.56.0",
+        "rollup"
+      ],
+      "optionalPeers": [
+        "rollup"
       ]
     },
     "@rollup/pluginutils@4.2.1": {
@@ -871,6 +884,18 @@
       "dependencies": [
         "estree-walker",
         "picomatch@2.3.1"
+      ]
+    },
+    "@rollup/pluginutils@5.3.0_rollup@4.56.0": {
+      "integrity": "sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q==",
+      "dependencies": [
+        "@types/estree",
+        "estree-walker",
+        "picomatch@4.0.3",
+        "rollup"
+      ],
+      "optionalPeers": [
+        "rollup"
       ]
     },
     "@rollup/rollup-android-arm-eabi@4.56.0": {
@@ -1598,6 +1623,7 @@
       "jsr:@std/front-matter@^1.0.5",
       "jsr:@std/path@^1.0.8",
       "npm:@preact/signals@^2.5.0",
+      "npm:@rollup/plugin-json@^6.1.0",
       "npm:@tailwindcss/vite@^4.1.12",
       "npm:github-slugger@2",
       "npm:preact@^10.27.2",
