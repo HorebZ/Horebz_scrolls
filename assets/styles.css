@@ -8,20 +8,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=UnifrakturCook:wght@700&display=swap');
+
 @font-face {
-  font-family: "Monaspace Krypton";
+  font-family: 'Monaspace Krypton';
   font-style: normal;
-  font-weight: 400;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/npm/@fontsource/monaspace-krypton@5.0.0/files/monaspace-krypton-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/monaspace-krypton@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/monaspace-neon@latest/latin-400-normal.woff) format('woff');
 }
 
 @font-face {
   font-family: "Monaspace Krypton";
   font-style: italic;
-  font-weight: 400;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/npm/@fontsource/monaspace-krypton@5.0.0/files/monaspace-krypton-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/monaspace-krypton@latest/latin-400-italic.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/monaspace-neon@latest/latin-400-italic.woff) format('woff');
 }
 
 @import "tailwindcss";
