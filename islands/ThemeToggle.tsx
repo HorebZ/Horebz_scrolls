@@ -1,7 +1,7 @@
 import { useEffect, useState } from "preact/hooks";
 import { type Theme, THEMES } from "../utils/theme.model.ts";
 
-export default function ThemeToggle() {
+function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>(THEMES.light);
 
   useEffect(() => {
@@ -60,3 +60,5 @@ export default function ThemeToggle() {
     </button>
   );
 }
+
+export default ThemeToggle;
