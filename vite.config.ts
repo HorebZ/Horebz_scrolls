@@ -4,6 +4,10 @@ import tailwindcss from "@tailwindcss/vite";
 import json from "@rollup/plugin-json";
 
 export default defineConfig({
-  // @ts-ignore json plugin is not typed
-  plugins: [fresh(), tailwindcss(), json()],
+  plugins: [
+    // @ts-ignore: @rollup/plugin-json types are not fully compatible with Deno yet
+    json({ include: "**/*.json" }),
+    fresh(),
+    tailwindcss(),
+  ],
 });
