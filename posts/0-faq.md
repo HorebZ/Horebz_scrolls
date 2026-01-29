@@ -6,43 +6,38 @@ published: false
 
 ### Qui est-tu ?
 
-Salut ! Moi c'est Horeb, passionate engineer, papa et geek.
+HorebZ, passionate engineer, papa et geek (ça mange des carte graphique).
 
-### Que vais-je trouver sur ici ?
+### Que vais-je trouver ici ?
 
-Ici c'est un mélange de blog et de "portfolio". C'est surtout mon bac a sable
-pour documenter ce que je tests. donc il peut y avoir des surprises un peut
-partout, ou un changement radical de style ou de techno en cours de route.
+Un mélange de blog, portfolio et de bac à sable. mes échecs et mes coups de
+génie (surtout les échecs). Des tips et des easter-eggs, des coquilles laissées
+exprès :p.
 
-Le projet est open source et disponible sur Github, le contenue textuel est
-majoritairement en markdown donc facile à modifier pour ce l'approrprié.
+Au programme : articles tech, partage de choses qui m'ont inspiré, projets perso
+et brouillons de reflection. Je suis un peut comme les premiers LLM, j’hallucine
+beaucoup mais parfois ça marche.
 
-J'y publierai principalement des articles tech sur des sujets variés comme la
-programmation, des retours sur des livres, des tests d'app ou de techno, des
-partages spontanés, quelques essais de reflexion, des projets perso et des
-brouillons. Important les brouillons !
+Pour la genèse du bidouilling, c’est par là :
+[Initial commit](/blog/1-initial-commit.md)
 
-Si tu veux en apprendre plus sur comment je l'ai "initialement" réalisé
-direction mon [premier article](/blog/1-mon-premier-article).
+Tout est open source sur GitHub.
 
-### Ce que je ne trouveras JAMAIS ici ?
+### Ce que je ne trouverai JAMAIS ici ?
 
-Du java.
+Du Java.
 
 ### Pourquoi tu fais ça ?
 
-Pour moi principalement, pour la bauté du geste et faire avancer la science (pas
-du tout). Pour partager mes galères et mes galères. Et surtout pour tester des
-technos, des idées et progresser.
+Pour la science (padutout). Pour l’amour de l’expérimentation. Pour moi, d’abord
+: un terrain de jeu pour apprendre, documenter et progresser. Et si ça peut
+inspirer ou éviter à d’autres de répéter mes erreurs, tant mieux.
 
 ### « Who asked ? »
 
-personne.
+Personne.
 
 ---
 
-Envoie moi ta question, sur une
-[issue Github](https://github.com/HorebZ/Horebz_scrolls), ou en direct si tu me
-connais et j'y répondrai.
-
-`NaN`
+J'ajouterais les questions posé sur
+[le repo github](https://github.com/HorebZ/Horebz_scrolls).
