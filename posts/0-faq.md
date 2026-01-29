@@ -37,7 +37,5 @@ inspirer ou éviter à d’autres de répéter mes erreurs, tant mieux.
 
 Personne.
 
----
-
-J'ajouterais les questions posé sur
-[le repo github](https://github.com/HorebZ/Horebz_scrolls).
+Mais si on me pose une question [ci](https://github.com/HorebZ/Horebz_scrolls)
+je l'ajouterais à la suite :)
