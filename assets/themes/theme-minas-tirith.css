@@ -40,7 +40,7 @@
   --category: var(--link-visited);
 
   /* Couleurs de code */
-  --code-background: var(--gris-mithril-50);
+  --code-background: var(--gris-mithril-100);
   --code-text: var(--gris-mithril-950);
   --code-keyword: var(--or-rohan-500);
   --code-string: var(--vert-success-500);
