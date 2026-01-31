@@ -8,10 +8,10 @@ export default define.page(function NotFound() {
         <title>404 | Horeb'z Scrolls</title>
       </Head>
 
-      <div class="text-center">
+      <div class="text-center mt-24">
         <div class="flex items-center justify-center">
           <h1
-            class="leading-none font-display font-extrabold text-text-primary"
+            class="leading-none font-display font-extrabold text-text-primary levitate"
             style={{ fontSize: "15rem" }}
           >
             4
@@ -19,15 +19,16 @@ export default define.page(function NotFound() {
           <img
             src="/assets/one-ring-fire.svg"
             alt="404"
-            class="w-1/2 max-w-[200px] pb-8"
+            class="w-1/2 max-w-[200px] pb-8 levitate"
           />
           <h1
-            class="leading-none font-display font-extrabold text-text-primary"
+            class="leading-none font-display font-extrabold text-text-primary levitate"
             style={{ fontSize: "15rem" }}
           >
             4
           </h1>
         </div>
+
         <h2 class="text-2xl font-bold text-text-primary mb-4">
           The Page You Seek Has Been Lost to the Shadows
         </h2>
