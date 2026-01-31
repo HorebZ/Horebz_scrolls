@@ -41,15 +41,28 @@
 
   --bleu-neon-attenue-400: #00b4ff;
   --bleu-neon-attenue-500: #0099dd;
+  --bleu-neon-attenue-600: #0088cc;
+  --bleu-neon-attenue-700: #0077b3;
 
   --rouge-mordor-400: #ff6600;
   --rouge-mordor-500: #e85d04;
   --rouge-mordor-600: #e74c3c;
   --rouge-mordor-700: #dc2f02;
 
+  --or-rohan-100: #fff8e1;
+  --or-rohan-200: #ffe9b3;
+  --or-rohan-300: #ffd785;
   --or-rohan-400: #ffd700;
   --or-rohan-500: #d4a017;
+  --or-rohan-600: #b8860b;
+  --or-rohan-700: #9a7307;
+  --or-rohan-800: #7c6003;
 
+  --violet-profond-100: #f3e8ff;
+  --violet-profond-200: #e1d5ff;
+  --violet-profond-300: #d2c3ff;
+  --violet-profond-400: #9b59b6;
+  --violet-profond-500: #8e44ad;
   --violet-profond-600: #6a4c93;
 
   --vert-lothlorien-900: #3a5f0b;

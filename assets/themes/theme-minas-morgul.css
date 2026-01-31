@@ -16,11 +16,11 @@
   --primary-dark: var(--vert-elfique-800);
 
   /* Couleurs d'accent */
-  --accent: var(--or-rohan-500);
-  --accent-hover: var(--bleu-neon-attenue-500);
+  --accent: var(--vert-elfique-900);
+  --accent-hover: var(--vert-elfique-500);
 
   /* Couleurs de texte */
-  --text-primary: var(--blanc-perle);
+  --text-primary: var(--gris-mithril-200);
   --text-secondary: var(--gris-mithril-300);
   --text-muted: var(--gris-mithril-500);
   --text-inverse: var(--gris-mithril-950);

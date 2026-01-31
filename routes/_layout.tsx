@@ -21,19 +21,19 @@ export default define.layout(function Layout({ Component }) {
             <div class="flex items-center gap-4">
               <a
                 href="/faq"
-                class="text-text-primary hover:text-accent transition-colors"
+                class="text-text-primary hover:text-link-hover transition-colors"
               >
                 FAQ
               </a>
               <a
                 href="/404"
-                class="text-text-primary hover:text-accent transition-colors"
+                class="text-text-primary hover:text-link-hover transition-colors"
               >
                 404
               </a>
               <a
                 href="https://github.com/HorebZ"
-                class="text-text-primary hover:text-accent transition-colors"
+                class="text-text-primary hover:text-link-hover transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
