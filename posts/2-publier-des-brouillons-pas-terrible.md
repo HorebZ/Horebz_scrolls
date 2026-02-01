@@ -1,9 +1,9 @@
 ---
 title: L'art de publier des brouillons "pas terrible"
 description: Pourquoi j'écris, et surtout, pourquoi je publie
-category: [essai, brouillon, reflexion]
+category: [essai, brouillon, thinking]
 date: "2026-01-24"
-published: false
+published: true
 ---
 
 Écrire a toujours été pour moi un exercice de mémoire et de réflexion. Que ce
@@ -30,4 +30,4 @@ court mais percutant. L’important réside dans la sincérité avec laquelle on
 transmet ce qu’on a à dire.
 
 > _« Il ne sert à rien de regretter ce qu’on n’a pas fait. Il faut faire ce
-> qu’on peut avec ce qu’on a. »_<br /> \- Sam Gamgee, _Les Deux Tours_
+> qu’on peut avec ce qu’on a. » <br /> \- Sam Gamgee, _Les Deux Tours_
