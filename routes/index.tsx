@@ -7,7 +7,7 @@ export default define.page(async function Home(ctx) {
 
   return (
     <div class="relative mx-auto max-w-3xl px-4">
-      <div class="pt-12">
+      <div class="pt-24">
         <h1 class="text-4xl font-display text-text-primary mb-8">
           Bienvenue dans les archives{" "}
           <s class="text-3xl text-text-muted">pas terrible</s> de HorebZ
