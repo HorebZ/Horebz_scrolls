@@ -7,6 +7,6 @@ export default defineConfig({
   ssr: {
     // Exclude problematic packages from SSR bundling
     // @denosaurs/emoji has a JSON file with escape characters that Rollup can't parse
-    external: ["@denosaurs/emoji"],
+    // external: ["@denosaurs/emoji"],
   },
 });
