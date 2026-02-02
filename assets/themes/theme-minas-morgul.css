@@ -1,6 +1,6 @@
 /*
   ============================================
-  MINAS MORGUL - Thème sombre
+  MINAS MORGUL - Dark theme
   ============================================
 */
 
@@ -37,18 +37,18 @@
   /* Couleurs de code */
   --code-background: var(--gris-mithril-800);
   --code-text: var(--blanc-perle);
-  --code-keyword: var(--or-rohan-400);
+  /* --code-keyword: var(--or-rohan-400);
   --code-string: var(--vert-success-500);
   --code-function: var(--bleu-gis-mithril-600);
   --code-comment: var(--gris-mithril-400);
-  --code-number: var(--rouge-mordor-600);
+  --code-number: var(--rouge-mordor-600); */
 
   /* Variables pour personnalisation des blocs de code */
   --code-block-bg: var(--code-background);
   --code-block-border: var(--border);
   --code-block-text: var(--code-text);
-  --code-line-number-color: var(--text-muted);
-  --code-line-number-border: var(--border);
+  /* --code-line-number-color: var(--text-muted);
+  --code-line-number-border: var(--border); */
 
   /* Couleurs de statut */
   --success: var(--vert-elfique-600);

@@ -49,8 +49,6 @@
   --color-primary-light: var(--primary-light);
   --color-primary-dark: var(--primary-dark);
 
-  --color-category: var(--accent);
-
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
 
@@ -60,25 +58,24 @@
   --color-text-inverse: var(--text-inverse);
 
   --color-border: var(--border);
-  --color-border-light: var(--border-light);
 
   --color-link: var(--accent);
   --color-link-hover: var(--accent-hover);
-  --color-link-visited: var(--link-visited);
+
 
   --color-code-background: var(--code-background);
   --color-code-text: var(--code-text);
-  --color-code-keyword: var(--code-keyword);
+  /* --color-code-keyword: var(--code-keyword);
   --color-code-string: var(--code-string);
   --color-code-function: var(--code-function);
   --color-code-comment: var(--code-comment);
-  --color-code-number: var(--code-number);
+  --color-code-number: var(--code-number); */
 
+  /* UNUSED: --color-code-block-* - not used as Tailwind classes, vars used directly in CSS */
   --color-code-block-bg: var(--code-block-bg);
   --color-code-block-border: var(--code-block-border);
   --color-code-block-text: var(--code-block-text);
-  --color-code-line-number-color: var(--code-line-number-color);
-  --color-code-line-number-border: var(--code-line-number-border);
+
 }
 
 body {

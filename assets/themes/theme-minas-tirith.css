@@ -1,6 +1,6 @@
 /*
   ============================================
-  MINAS TIRITH - Thème clair
+  MINAS TIRITH - Light theme
   ============================================
 */
 
@@ -8,8 +8,6 @@
   /* Couleurs de fond */
   --background: var(--blanc-gondor-clair);
   --surface: var(--blanc-gondor);
-  /* --background: var(--blanc-gondor);
-  --surface: var(--blanc-gondor-clair); */
   --surface-elevated: var(--gris-mithril-100);
 
   /* Couleurs principales */
@@ -34,26 +32,22 @@
   /* Couleurs de liens */
   --link: var(--bleu-gis-mithril-400);
   --link-hover: var(--bleu-gis-mithril-500);
-  --link-visited: var(--gris-mithril-600);
-
-  /* Couleurs cathégories */
-  --category: var(--link-visited);
 
   /* Couleurs de code */
   --code-background: var(--gris-mithril-100);
   --code-text: var(--gris-mithril-950);
-  --code-keyword: var(--or-rohan-500);
+  /* --code-keyword: var(--or-rohan-500);
   --code-string: var(--vert-success-500);
   --code-function: var(--bleu-gis-mithril-600);
   --code-comment: var(--gris-mithril-400);
-  --code-number: var(--rouge-mordor-600);
+  --code-number: var(--rouge-mordor-600); */
 
   /* Variables pour personnalisation des blocs de code */
   --code-block-bg: var(--code-background);
   --code-block-border: var(--border);
-  --code-block-text: var(--code-text);
-  --code-line-number-color: var(--text-muted);
-  --code-line-number-border: var(--border);
+  /* --code-block-text: var(--code-text); */
+  /* --code-line-number-color: var(--text-muted); */
+  /* --code-line-number-border: var(--border); */
 
   /* Couleurs de statut */
   --success: var(--vert-success-500);
