@@ -6,57 +6,57 @@ category: [tech, typescript, hype-stack]
 published: true
 ---
 
-Apres plusieurs tests et itérations de blog, que ce soit avec des générateurs
-type Zola / Hugo ou à avec un framework classique comme Leptos, Svelte ou React,
-Ce blog est finalement réagliser en [Deno](https://deno.land/),
+Après plusieurs tests et itérations de blog, que ce soit avec des générateurs
+type Zola / Hugo ou avec un framework classique comme Leptos, Svelte ou React,
+Ce blog est finalement réalisé avec [Deno](https://deno.land/),
 [Fresh](https://fresh.deno.dev/) et [Tailwind CSS](https://tailwindcss.com/).
 
 ### Les contraintes
 
-Des technologies modernes avec un bon rapport faibles nécécité de configuration
-et liberté de developpeement pour pouvoir ce concentrer sur l'écriture et le
+Des technologies modernes avec un bon rapport faible nécessité de configuration
+et liberté de développement pour pouvoir se concentrer sur l'écriture et le
 design du site.
 
 Compatibilité avec Tailwind 4 (je n'aime pas faire du CSS pur). Cela écarte les
-environement non js car la configuration est souvent fastidieuse (bye bye
+environnement non js car la configuration est souvent fastidieuse (bye bye
 [leptos 🦀](https://leptos.dev/)).
 
-Deployement simple et gratuit. [Deno deploy](https://deno.com/deploy) est
+Déploiement simple et gratuit. [Deno deploy](https://deno.com/deploy) est
 aujourd'hui une solution agréable et fiable (ou presque).
 
 ### Svelte x Deno
 
-[Deno x Svelte](https://docs.deno.com/examples/svelte_tutorial/) à été m'a base.
-le routing, lecture de fichier markdown et le theme (couleur, layout) ont été
-rapidement implémentés.
+[Deno x Svelte](https://docs.deno.com/examples/svelte_tutorial/) a été ma base.
+Le routing, la lecture des fichiers markdown et le thème (couleurs, layout) ont
+été rapidement implémentés.
 
-un problème de compatibilité connu entre Deno et le processus de build de
+Un problème de compatibilité connu entre Deno et le processus de build de
 SvelteKit (plus précisément l'étape d'analyse des fichiers générés). SvelteKit
 génère des fichiers temporaires (comme `nodes/0.js`) et tente de les importer
 dynamiquement pour les analyser. Deno a parfois du mal à résoudre ces chemins de
-fichiers générés à la volée à l'intérieur du processus Vite. L'une des solution
-est d'utiliser node pour le build puis d'executer avec deno.
+fichiers générés à la volée à l'intérieur du processus Vite. L'une des solutions
+est d'utiliser Node pour le build puis d'exécuter avec Deno.
 
 ### Migration vers Fresh 🍋
 
 Spoiler : IA to the rescue !
 
-Apres avoir fait de deuil douleureux de svelte et initialiser le projet fresh,
-j'ai fais convertir les fichiers svelte en preact. Gemini 3 pro pour crée le
-plan, Gémini 3 flash pour l'éxecuter.
+Après avoir fait le deuil douloureux de Svelte et initialisé le projet Fresh,
+j'ai fait convertir les fichiers Svelte en Preact. Gemini 3 Pro pour créer le
+plan, Gemini 3 Flash pour l'exécuter.
 
-Fresh étant un framework fais pour Deno c'est un choix plus pragmatique.
+Fresh étant un framework fait pour Deno c'est un choix plus pragmatique.
 
 ### « emoji can destroy deno deploy 🥸 »
 
-<img width="200" src="https://media.tenor.com/UP3tVJlv7DUAAAAC/gandalf-what.gif" alt="a man with long hair and a beard looks serious" />
+<img width="700" src="https://media.tenor.com/UP3tVJlv7DUAAAAC/gandalf-what.gif" alt="a man with long hair and a beard looks serious" />
 
 Le package [`@deno/gfm`](https://jsr.io/@deno/gfm) qui permet le parsing des
 fichiers markdown à comme dépendance
-[@denosaurs/emoji](https://github.com/denosaurs/emoji) a un immense fichier JSON
-qui permet de faire le raprochement entre `:ring:` et 💍 dans les fichiers
-markdown. Au build sur Deno deploy, il manque un caractère d'échappement qui
-provoque la ruine de Rollup.
+[@denosaurs/emoji](https://github.com/denosaurs/emoji) qui fais échoeur le
+build. Il contient un immense dictionnaire JSON permettant d'établir la
+correspondance entre `:ring :` et 💍. Il y manque un caractère d'échappement qui
+provoque une erreur lors du build via Vite.
 
 Pour résoudre ce problème, il suffit d'exclure `@denosaurs/emoji` de la config
 vite
@@ -71,7 +71,7 @@ export default defineConfig({
 });
 ```
 
-> EDIT : en voulais regénérer un build pour afficher l'output ici je me suis
+> EDIT : en voulant regénérer un build pour afficher l'output ici je me suis
 > rendu compte que l'erreur semble être corrigée.
 
 ### « What the FOUC ? »
@@ -87,23 +87,23 @@ Passer par un CDN permet la mise en cache des fonts, le FOUC n'arrive qu'au
 premier chargement d'une nouvelle ressource.
 
 Pour le theme, avec une solution via cookies, il faut ajouter un middleware pour
-injecter le theme côté serveur. Seul soucis (actuelement non résolu) : la
+injecter le theme côté serveur. Seul soucis (actuellement non résolu) : la
 navigation via l’historique reste affectée : le thème redevient celui de la
 visite précédente, car le navigateur restaure la page telle qu’elle était en
 cache, sans réévaluer les cookies ou le JS. Un refresh réaplique le theme de la
 page.
 
-<img width="400" src="/assets/FOUC.gif" alt="FOUC" />
+<img width="800" src="/assets/FOUC.gif" alt="FOUC" />
 
 ### Conclusion
 
 Je recommande fortement cette stack pour un blog personnel. Elle est
 performante, légère et facile à maintenir.
 
-Pour plus d'infos sur comment lancé, configurer et deployer ce type de projet,
+Pour plus d'infos sur comment lancer, configurer et déployer ce type de projet,
 je vous invite à consulter le
 [README du projet](https://github.com/HorebZ/Horebz_scrolls/) (et en profiter
-pour laisser un star 🌟).
+pour laisser une étoile 🌟).
 
 > « Il n'y a pas de place pour la faiblesse quand on affronte les défis d'un
 > monde en mutation. On doit faire des choix difficiles, abandonner ce qui nous
