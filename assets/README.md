@@ -1,6 +1,6 @@
 # Colors & Themes
 
-Colors and variable names are inspired by Tolkien's universe. Everything stays
+Colors and variable names are inspired by Tolkien's universe. Everything is
 decoupled. The main entry point for Tailwind theming is `styles.css`.
 
 ## Create a Theme
