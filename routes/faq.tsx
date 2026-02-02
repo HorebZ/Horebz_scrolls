@@ -5,7 +5,7 @@ import { render } from "@deno/gfm";
 import { Head } from "fresh/runtime";
 
 export default define.page(async function About() {
-  const faq = await getPost("0-faq");
+  const faq = await getPost("chap-0");
 
   if (!faq) {
     return new Response(null, { status: 404 });
