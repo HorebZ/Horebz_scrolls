@@ -107,4 +107,4 @@ pour laisser une étoile 🌟).
 
 > « Il n'y a pas de place pour la faiblesse quand on affronte les défis d'un
 > monde en mutation. On doit faire des choix difficiles, abandonner ce qui nous
-> est cher pour avancer. » <br /> \- Elrond, _La Communauté de l'Anneau_
+> est cher pour avancer. » <br /> \- Elrond, La Communauté de l'Anneau

@@ -29,5 +29,5 @@ L’un des articles qui m’a encouragé dans cette voie est
 court mais percutant. L’important réside dans la sincérité avec laquelle on
 transmet ce qu’on a à dire.
 
-> _« Il ne sert à rien de regretter ce qu’on n’a pas fait. Il faut faire ce
-> qu’on peut avec ce qu’on a. » <br /> \- Sam Gamgee, _Les Deux Tours_
+> « Il ne sert à rien de regretter ce qu’on n’a pas fait. Il faut faire ce qu’on
+> peut avec ce qu’on a. » <br /> \- Sam Gamgee, Les Deux Tours
