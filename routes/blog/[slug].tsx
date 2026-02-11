@@ -12,7 +12,9 @@ export default define.page(async function PostPage(ctx) {
     return new Response(null, { status: 404 });
   }
 
-  const html = render(post.content);
+  const html = render(post.content)
+    .replace(/<a(?![^>]*\btarget=)/gi, '<a target="_blank"')
+    .replace(/<a(?![^>]*\brel=)/gi, '<a rel="noopener noreferrer"');
 
   return (
     <article class="max-w-3xl mx-auto py-12 px-4">
