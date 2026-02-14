@@ -17,7 +17,7 @@ export default define.page(async function PostPage(ctx) {
     .replace(/<a(?![^>]*\brel=)/gi, '<a rel="noopener noreferrer"');
 
   return (
-    <article class="max-w-3xl mx-auto py-12 px-4">
+    <article class="py-12">
       <Head>
         <title>{post.title} | Horeb'z Scrolls</title>
         <meta name="description" content={post.description} />
@@ -42,11 +42,11 @@ export default define.page(async function PostPage(ctx) {
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
-      <footer class="mt-12 pt-8 border-t border-border">
-        <a href="/" class="hover:text-link-hover transition-colors">
+      <div class="mt-12 pt-8 border-t border-border">
+        <a href="/">
           ← Mes autres <s>brouillons</s> articles
         </a>
-      </footer>
+      </div>
     </article>
   );
 });

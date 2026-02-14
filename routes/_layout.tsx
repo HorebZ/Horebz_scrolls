@@ -45,8 +45,8 @@ export default define.layout(function Layout({ Component }) {
         </div>
       </header>
 
-      <main class="bg-background min-h-screen transition-colors duration-300">
-        <div class="max-w-3xl mx-auto px-4">
+      <main class="bg-background flex-1 flex flex-col transition-colors duration-300">
+        <div class="max-w-3xl mx-auto px-8">
           <Component />
         </div>
       </main>
