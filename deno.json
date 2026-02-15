@@ -11,6 +11,7 @@
   "exclude": ["**/_fresh/*"],
   "imports": {
     "@/": "./",
+    "@horebz/is-one-thousand-nine-hundred-and-ninety-nine": "jsr:@horebz/is-one-thousand-nine-hundred-and-ninety-nine@^0.1.2",
     "fresh": "jsr:@fresh/core@^2.2.0",
     "preact": "npm:preact@^10.27.2",
     "@preact/signals": "npm:@preact/signals@^2.5.0",

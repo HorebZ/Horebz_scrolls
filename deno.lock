@@ -13,6 +13,7 @@
     "jsr:@fresh/core@2": "2.2.0",
     "jsr:@fresh/core@^2.2.0": "2.2.0",
     "jsr:@fresh/plugin-vite@^1.0.8": "1.0.8",
+    "jsr:@horebz/is-one-thousand-nine-hundred-and-ninety-nine@~0.1.2": "0.1.2",
     "jsr:@std/assert@*": "1.0.17",
     "jsr:@std/async@*": "1.1.0",
     "jsr:@std/bytes@^1.0.6": "1.0.6",
@@ -142,6 +143,9 @@
         "npm:rollup",
         "npm:vite@^7.1.4"
       ]
+    },
+    "@horebz/is-one-thousand-nine-hundred-and-ninety-nine@0.1.2": {
+      "integrity": "6ca7eb1177396fff4610080d722a6a6edbfefb17b7c4a75ab4bf3ab106b967a7"
     },
     "@std/assert@1.0.17": {
       "integrity": "df5ebfffe77c03b3fa1401e11c762cc8f603d51021c56c4d15a8c7ab45e90dbe",
@@ -863,19 +867,9 @@
         "@prefresh/babel-plugin",
         "@prefresh/core",
         "@prefresh/utils",
-        "@rollup/pluginutils@4.2.1",
+        "@rollup/pluginutils",
         "preact",
         "vite"
-      ]
-    },
-    "@rollup/plugin-json@6.1.0_rollup@4.56.0": {
-      "integrity": "sha512-EGI2te5ENk1coGeADSIwZ7G2Q8CJS2sF120T7jLw4xFw9n7wIOXHo+kIYRAoVpJAN+kmqZSoO3Fp4JtoNF4ReA==",
-      "dependencies": [
-        "@rollup/pluginutils@5.3.0_rollup@4.56.0",
-        "rollup"
-      ],
-      "optionalPeers": [
-        "rollup"
       ]
     },
     "@rollup/pluginutils@4.2.1": {
@@ -883,18 +877,6 @@
       "dependencies": [
         "estree-walker",
         "picomatch@2.3.1"
-      ]
-    },
-    "@rollup/pluginutils@5.3.0_rollup@4.56.0": {
-      "integrity": "sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q==",
-      "dependencies": [
-        "@types/estree",
-        "estree-walker",
-        "picomatch@4.0.3",
-        "rollup"
-      ],
-      "optionalPeers": [
-        "rollup"
       ]
     },
     "@rollup/rollup-android-arm-eabi@4.56.0": {
@@ -1619,6 +1601,7 @@
       "jsr:@deno/gfm@0.11",
       "jsr:@fresh/core@^2.2.0",
       "jsr:@fresh/plugin-vite@^1.0.8",
+      "jsr:@horebz/is-one-thousand-nine-hundred-and-ninety-nine@~0.1.2",
       "jsr:@std/front-matter@^1.0.5",
       "jsr:@std/path@^1.0.8",
       "npm:@preact/signals@^2.5.0",
