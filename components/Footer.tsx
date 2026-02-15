@@ -1,26 +1,21 @@
+import { Copyright } from "./copyright.tsx";
+
 export function Footer() {
   return (
     <footer class="w-full">
-      <div class="max-w-3xl mx-auto px-4">
-        <div class="mt-12 flex flex-row items-start justify-between h-full pt-8 border-t border-border text-center">
-          <div class="flex items-center justify-center">
-            <img
-              src="/assets/one-ring-dark.svg"
-              alt="One ring dark"
-              class="levitate w-1/2 max-w-[42px] pb-8"
-            />
-            <img
-              src="/assets/one-ring-fire.svg"
-              alt="One ring fire"
-              class="levitate w-1/2 max-w-[42px] pb-8"
-            />
-            <img
-              src="/assets/one-ring-light.svg"
-              alt="One ring light"
-              class="levitate w-1/2 max-w-[42px] pb-8"
-            />
+      <div class="max-w-3xl mx-auto">
+        <div class="mt-12 flex sm:flex-row flex-col sm:items-end justify-between h-full pt-8 border-t border-border">
+          <div class="hidden grid sm:grid-cols-4 grid-cols-3 sm:gap-x-4 gap-y-2 justify-start items-start text-left">
+            <a href="/rss.xml" target="_blank">rss feed</a>
+            <a href="/is-one-thousand-nine-hundred-and-ninety-nine">1999</a>
+            <a href="/faq">faq</a>
+            <a href="/404">/404</a>
+            <a href="https://github.com/HorebZ/Horebz_scrolls" target="_blank">
+              Repo
+            </a>
           </div>
-          <p class="text-sm text-text-secondary">crafted by Horebz</p>
+
+          <Copyright />
         </div>
       </div>
     </footer>
