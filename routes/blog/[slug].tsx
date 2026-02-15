@@ -9,7 +9,10 @@ export default define.page(async function PostPage(ctx) {
   const post = await getPost(slug);
 
   if (!post) {
-    return new Response(null, { status: 404 });
+    return new Response(null, {
+      status: 302,
+      headers: { location: "/404" },
+    });
   }
 
   const html = render(post.content)
