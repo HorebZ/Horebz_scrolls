@@ -1,7 +1,9 @@
 # Horeb'z Scrolls
 
-<img src="https://deno.land/logo.svg" alt="Deno logo" />
-<img src="https://fresh.deno.dev/logo.svg" alt="Fresh logo" />
+<div>
+  <img width="50" src="https://deno.land/logo.svg" alt="Deno logo" />
+  <img width="50" src="https://fresh.deno.dev/logo.svg" alt="Fresh logo" />
+</div>
 
 ##### Don't forget to star the repository 🌟
 
