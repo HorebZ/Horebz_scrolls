@@ -53,7 +53,7 @@ Fresh étant un framework fait pour Deno c'est un choix plus pragmatique.
 
 Le package [`@deno/gfm`](https://jsr.io/@deno/gfm) qui permet le parsing des
 fichiers markdown à comme dépendance
-[@denosaurs/emoji](https://github.com/denosaurs/emoji) qui fais échoeur le
+[@denosaurs/emoji](https://github.com/denosaurs/emoji) qui fais échouer le
 build. Il contient un immense dictionnaire JSON permettant d'établir la
 correspondance entre `:ring :` et 💍. Il y manque un caractère d'échappement qui
 provoque une erreur lors du build via Vite.
@@ -71,7 +71,7 @@ export default defineConfig({
 });
 ```
 
-> EDIT : en voulant regénérer un build pour afficher l'output ici je me suis
+> EDIT : en voulant régénérer un build pour afficher l'output ici je me suis
 > rendu compte que l'erreur semble être corrigée.
 
 ### « What the FOUC ? »
@@ -90,7 +90,7 @@ Pour le theme, avec une solution via cookies, il faut ajouter un middleware pour
 injecter le theme côté serveur. Seul soucis (actuellement non résolu) : la
 navigation via l’historique reste affectée : le thème redevient celui de la
 visite précédente, car le navigateur restaure la page telle qu’elle était en
-cache, sans réévaluer les cookies ou le JS. Un refresh réaplique le theme de la
+cache, sans réévaluer les cookies ou le JS. Un refresh réapplique le theme de la
 page.
 
 <img width="800" src="/assets/FOUC.gif" alt="FOUC" />
