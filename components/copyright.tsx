@@ -12,13 +12,11 @@ export function Copyright() {
     return assets[Math.floor(Math.random() * assets.length)];
   };
 
-  const ring = <img src={randomAsset()} alt="o" class="w-5 h-5" />;
+  const ring = <img src={randomAsset()} alt="o" class="w-4 h-4" />;
 
   return (
     <div class="flex justify-end items-baseline gap-2">
-      <span class="font-mono">crafted by</span>
-
-      <span class="flex items-center text-2xl font-bold font-display">
+      <span class="flex items-center text-xl font-bold font-display">
         H {ring} reb'z
       </span>
     </div>
