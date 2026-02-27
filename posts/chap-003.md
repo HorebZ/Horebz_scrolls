@@ -1,7 +1,7 @@
 ---
 title: N'oublie jamais de te demander "pourquoi ?"
 description: La frustration face au code legacy nous fait parfois oublier d'étudier son histoire. La dette d'hier peut-elle nous aider à mieux comprendre la dette de demain ?
-category: [essai, brouillon, thinking, dev]
+category: [Thinking, Dev]
 date: "2026-02-10"
 published: true
 ---

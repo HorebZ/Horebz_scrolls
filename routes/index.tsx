@@ -1,5 +1,6 @@
 import Categories from "../components/Categories.tsx";
 import { define } from "../utils.ts";
+import { formatDate } from "../utils/date.ts";
 import { getPosts, Post } from "../utils/posts.ts";
 
 export default define.page(async function Home(ctx) {
@@ -12,37 +13,40 @@ export default define.page(async function Home(ctx) {
         <s class="text-3xl text-text-muted">pas terrible</s> de HorebZ
       </h1>
 
-      <div class="relative space-y-12">
+      <div class="relative space-y-12 divide-y divide-border border-b border-border">
         {posts.map((post: Post, index: number) => (
           <article class="relative">
-            {index !== 0 && (
-              <div class="absolute left-0 right-0 top-[-16px] h-px bg-border" />
-            )}
-            {index !== posts.length - 1 && (
-              <div class="absolute left-0 right-0 bottom-[-16px] h-px bg-border" />
-            )}
+            <h4>
+              <a
+                href={`/blog/${post.slug}`}
+                class="font-display hover:underline text-text-primary text-xl"
+              >
+                {
+                  /* <span class="text-display text-gray-500">{post.slug} :</span>
+                {" "} */
+                }
+                {post.title}
+              </a>
+            </h4>
 
-            <h3 class="text-2xl font-bold">
+            <p class="leading-tight text-sm text-text-secondary">
+              {post.description}
+            </p>
+
+            <Categories categories={post.category} />
+            <div class="flex justify-between mt-2">
               <a
                 href={`/blog/${post.slug}`}
                 class="font-display hover:underline text-text-primary"
               >
-                {post.title}
+                Feuilleter →
               </a>
-            </h3>
-
-            <div class="flex justify-between items-end mb-4 gap-2">
-              <div class="flex flex-col gap-2">
-                <em class="font-size-sm text-text-secondary leading-tight inline-block">
-                  {post.description}
-                </em>
-                <div class="pb-1">
-                  <Categories categories={post.category} />
-                </div>
-              </div>
-
-              <span class="text-text-muted shrink-0 line-height-0">
-                {post.date.toISOString().split("T")[0]}
+              <span class="font-display shrink-0 line-height-0">
+                {post.date.toLocaleDateString("fr-FR", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
               </span>
             </div>
           </article>

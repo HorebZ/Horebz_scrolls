@@ -2,7 +2,7 @@
 title: Deno, Fresh, Deno deploy. Facile, mais pas trop.
 description: Créer un site moderne avec Deno, Fresh et Tailwind CSS - une stack légère et performante, sans enlever la douceur d'une erreur de build.
 date: "2026-01-21"
-category: [tech, typescript, hype-stack]
+category: [Tech, Typescript]
 published: true
 ---
 

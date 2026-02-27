@@ -16,12 +16,12 @@
   --primary-dark: var(--gris-mithril-700);
 
   /* Couleurs d'accent */
-  --accent: var(--or-rohan-400);
-  --accent-hover: var(--or-rohan-700);
+  --accent: var(--or-rohan-300);
+  --accent-hover: var(--or-rohan-600);
 
   /* Couleurs de texte */
   --text-primary: var(--gris-mithril-900);
-  --text-secondary: var(--gris-mithril-700);
+  --text-secondary: var(--gris-mithril-600);
   --text-muted: var(--gris-mithril-600);
   --text-inverse: var(--blanc-perle);
 

@@ -1,7 +1,7 @@
 ---
 title: L'art de publier des brouillons "pas terrible"
 description: Pourquoi j'écris, et surtout, pourquoi je publie
-category: [essai, brouillon, thinking]
+category: [Brouillon, Essaie]
 date: "2026-01-24"
 published: true
 ---
