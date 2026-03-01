@@ -3,6 +3,8 @@ import { getPost } from "../../utils/posts.ts";
 import { render } from "@deno/gfm";
 import { Head } from "fresh/runtime";
 import Categories from "../../components/Categories.tsx";
+import UpvoteButton from "../../islands/UpvoteButton.tsx";
+import { getUpvoteCount, getVoterId, hasUpvoted } from "../../utils/upvotes.ts";
 
 export default define.page(async function PostPage(ctx) {
   const { slug } = ctx.params;
@@ -18,6 +20,13 @@ export default define.page(async function PostPage(ctx) {
   const html = render(post.content)
     .replace(/<a(?![^>]*\btarget=)/gi, '<a target="_blank"')
     .replace(/<a(?![^>]*\brel=)/gi, '<a rel="noopener noreferrer"');
+
+  const cookieHeader = ctx.req.headers.get("cookie") ?? "";
+  const voterId = getVoterId(cookieHeader);
+  const [upvoteCount, alreadyUpvoted] = await Promise.all([
+    getUpvoteCount(slug),
+    voterId ? hasUpvoted(slug, voterId) : Promise.resolve(false),
+  ]);
 
   return (
     <article class="py-12">
@@ -45,10 +54,16 @@ export default define.page(async function PostPage(ctx) {
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
-      <div class="mt-12 pt-8 border-t border-border">
+      <div class="mt-12 pt-8 border-t border-border flex justify-between sm:items-center sm:flex-row flex-col">
         <a href="/">
           ← Mes autres <s>brouillons</s> articles
         </a>
+
+        <UpvoteButton
+          slug={slug}
+          initialCount={upvoteCount}
+          initiallyUpvoted={alreadyUpvoted}
+        />
       </div>
     </article>
   );

@@ -280,3 +280,14 @@ hr {
   0% { transform: translateY(0); }
   100% { transform: translateY(-10px); }
 }
+
+/* Animation de "pulsation" pour l'upvote */
+@keyframes upvotePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.animate-upvote {
+  animation: upvotePulse 0.3s ease-out;
+}
