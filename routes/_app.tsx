@@ -8,6 +8,12 @@ export default define.page(function App({ Component, state }) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/assets/favicon.jpg" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Horeb'z Scrolls RSS"
+          href="/rss.xml"
+        />
         <title>Horeb'z Scrolls</title>
         <meta name="description" content="Blog d'un jeune arpenteur du code" />
       </head>

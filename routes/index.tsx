@@ -1,6 +1,6 @@
 import Categories from "../components/Categories.tsx";
+import { Footer } from "../components/Footer.tsx";
 import { define } from "../utils.ts";
-import { formatDate } from "../utils/date.ts";
 import { getPosts, Post } from "../utils/posts.ts";
 
 export default define.page(async function Home(ctx) {
@@ -52,6 +52,8 @@ export default define.page(async function Home(ctx) {
           </article>
         ))}
       </div>
+
+      <Footer />
     </div>
   );
 });

@@ -26,10 +26,11 @@ export default define.layout(function Layout({ Component }) {
                 FAQ
               </a>
               <a
-                href="/404"
+                href="/rss.xml"
                 class="text-text-primary hover:text-link-hover transition-colors"
+                target="_blank"
               >
-                404
+                RSS
               </a>
               <a
                 href="https://github.com/HorebZ"

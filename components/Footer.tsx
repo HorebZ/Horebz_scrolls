@@ -3,10 +3,14 @@ import { Copyright } from "./copyright.tsx";
 export function Footer() {
   return (
     <footer class="w-full">
-      <div class="max-w-3xl mx-auto text-center">
-        <div class="mt-12 flex sm:flex-row flex-col sm:items-end justify-between h-full py-4 border-b border-border">
+      {/* //divder au centre entre les deux items */}
+      <div class="max-w-3xl mt-12 mx-auto text-center divide-y divide-border space-y-4">
+        <div class="flex flex-row pb-4 justify-between h-full">
           <Copyright />
-          <div class="space-x-8 font-display text-sm text-text-secondary">
+
+          {/* alligné le texte en bas */}
+          <div class="space-x-4 font-display text-sm text-text-secondary flex items-end">
+            <a href="/404">404</a>
             <a href="/rss.xml" target="_blank">
               RSS
             </a>
@@ -21,12 +25,12 @@ export function Footer() {
               href="https://github.com/HorebZ/Horebz_scrolls"
               target="_blank"
             >
-              GitHub
+              Repo GitHub
             </a>
           </div>
         </div>
 
-        <div class="pt-4">
+        <div class="pb-4">
           <span class="font-display text-sm text-text-secondary">
             Crafté avec soin dans une humble forge de la Terre du Milieu ©{" "}
             {new Date().getFullYear()} HorebZ
