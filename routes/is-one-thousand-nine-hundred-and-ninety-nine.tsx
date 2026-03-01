@@ -15,7 +15,7 @@ export default define.page(function IsOneThousandNineHundredAndNinetyNine() {
           Is one thousand nine hundred and ninety nine ?
         </h1>
         <p class="text-center text-text-secondary mb-6 max-w-md">
-          Comment je fais pour savoir ? C'est simple, j'utilise{` `}
+          Quel arcane est à l'origine de cette énigme ?{` `}
           <a
             href="https://github.com/HorebZ/is-one-thousand-nine-hundred-and-ninety-nine"
             target="_blank"
