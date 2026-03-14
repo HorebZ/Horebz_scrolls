@@ -16,10 +16,10 @@ export default define.page(async function Home(ctx) {
       <div class="relative space-y-12 divide-y divide-border border-b border-border">
         {posts.map((post: Post, index: number) => (
           <article class="relative">
-            <h4>
+            <h3>
               <a
                 href={`/blog/${post.slug}`}
-                class="font-display hover:underline text-text-primary text-xl"
+                class="font-display hover:underline text-text-primary"
               >
                 {
                   /* <span class="text-display text-gray-500">{post.slug} :</span>
@@ -27,7 +27,7 @@ export default define.page(async function Home(ctx) {
                 }
                 {post.title}
               </a>
-            </h4>
+            </h3>
 
             <p class="leading-tight text-sm text-text-secondary">
               {post.description}
