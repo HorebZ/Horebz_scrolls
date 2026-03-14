@@ -24,7 +24,17 @@ export const handler = define.handlers({
     const posts = await getPosts();
     const siteUrl = getSiteUrl(ctx.req);
     const feedUrl = `${siteUrl}/rss.xml`;
+    const logoPath = "./static/assets/logo.png";
+    const logoUrl = `${siteUrl}/assets/logo.png`;
     const lastBuildDate = posts[0]?.date ?? new Date();
+    let logoSize = 0;
+
+    try {
+      logoSize = (await Deno.stat(logoPath)).size;
+    } catch {
+      // Keep a safe fallback if the file is missing in a given environment.
+      logoSize = 0;
+    }
 
     const items = posts.map((post) => {
       const url = `${siteUrl}/blog/${post.slug}`;
@@ -35,11 +45,13 @@ export const handler = define.handlers({
 <guid isPermaLink="true">${escapeXml(url)}</guid>
 <pubDate>${post.date.toUTCString()}</pubDate>
 <description>${escapeXml(post.description)}</description>
+<enclosure url="${escapeXml(logoUrl)}" length="${logoSize}" type="image/png" />
+<media:thumbnail url="${escapeXml(logoUrl)}" />
 </item>`;
     }).join("\n");
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
 <channel>
 <title>Horeb&apos;z Scrolls</title>
 <link>${escapeXml(siteUrl)}</link>
@@ -47,6 +59,11 @@ export const handler = define.handlers({
 <language>fr-FR</language>
 <lastBuildDate>${lastBuildDate.toUTCString()}</lastBuildDate>
 <atom:link href="${escapeXml(feedUrl)}" rel="self" type="application/rss+xml" />
+<image>
+<url>${escapeXml(logoUrl)}</url>
+<title>Horeb&apos;z Scrolls</title>
+<link>${escapeXml(siteUrl)}</link>
+</image>
 ${items}
 </channel>
 </rss>
