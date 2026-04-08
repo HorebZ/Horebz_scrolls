@@ -16,6 +16,20 @@ export default define.page(function App({ Component, state }) {
         />
         <title>Horeb'z Scrolls</title>
         <meta name="description" content="Blog d'un jeune arpenteur du code" />
+        <script dangerouslySetInnerHTML={{ __html: `(function() {
+            function applyTheme() {
+              var m = document.cookie.match(/theme=(dark|light)/);
+              if (m && m[1] === 'dark') {
+                document.documentElement.classList.add('dark');
+              } else {
+                document.documentElement.classList.remove('dark');
+              }
+            }
+            applyTheme();
+            window.addEventListener('pageshow', function(e) {
+              applyTheme();
+            });
+          })();` }} />
       </head>
 
       <body class="bg-background text-text-primary transition-colors duration-300">
