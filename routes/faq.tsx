@@ -1,8 +1,9 @@
 import { define } from "../utils.ts";
 import { headerTitle } from "../utils/model.ts";
 import { getPost } from "../utils/posts.ts";
-import { render } from "@deno/gfm";
+import { renderMarkdown } from "../utils/markdown.ts";
 import { Head } from "fresh/runtime";
+import MermaidRenderer from "../islands/MermaidRenderer.tsx";
 
 export default define.page(async function About() {
   const faq = await getPost("chap-0");
@@ -11,7 +12,8 @@ export default define.page(async function About() {
     return new Response(null, { status: 404 });
   }
 
-  const html = render(faq.content)
+  const { html: markdown, hasMermaid } = renderMarkdown(faq.content);
+  const html = markdown
     .replace(/<a(?![^>]*\btarget=)/gi, '<a target="_blank"');
 
   return (
@@ -24,6 +26,7 @@ export default define.page(async function About() {
         class="markdown-content"
         dangerouslySetInnerHTML={{ __html: html }}
       />
+      {hasMermaid && <MermaidRenderer />}
     </div>
   );
 });

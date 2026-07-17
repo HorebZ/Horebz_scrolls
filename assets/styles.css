@@ -183,6 +183,17 @@ pre code {
   position: relative;
 }
 
+.markdown-content pre.mermaid {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.markdown-content pre.mermaid svg {
+  height: auto;
+  max-width: 100%;
+}
+
 blockquote {
   font-style: italic;
   border-left: 3px solid var(--accent);

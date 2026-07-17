@@ -1,8 +1,9 @@
 import { define } from "../../utils.ts";
 import { getPost } from "../../utils/posts.ts";
-import { render } from "@deno/gfm";
+import { renderMarkdown } from "../../utils/markdown.ts";
 import { Head } from "fresh/runtime";
 import Categories from "../../components/Categories.tsx";
+import MermaidRenderer from "../../islands/MermaidRenderer.tsx";
 import UpvoteButton from "../../islands/UpvoteButton.tsx";
 import { getUpvoteCount, getVoterId, hasUpvoted } from "../../utils/upvotes.ts";
 
@@ -17,7 +18,8 @@ export default define.page(async function PostPage(ctx) {
     });
   }
 
-  const html = render(post.content)
+  const { html: markdown, hasMermaid } = renderMarkdown(post.content);
+  const html = markdown
     .replace(/<a(?![^>]*\btarget=)/gi, '<a target="_blank"')
     .replace(/<a(?![^>]*\brel=)/gi, '<a rel="noopener noreferrer"');
 
@@ -53,6 +55,7 @@ export default define.page(async function PostPage(ctx) {
         class="markdown-content"
         dangerouslySetInnerHTML={{ __html: html }}
       />
+      {hasMermaid && <MermaidRenderer />}
 
       <div class="mt-12 pt-8 border-t border-border flex justify-between sm:items-center sm:flex-row flex-col">
         <a href="/">
