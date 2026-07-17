@@ -1,4 +1,3 @@
-import Categories from "../components/Categories.tsx";
 import { Footer } from "../components/Footer.tsx";
 import { define } from "../utils.ts";
 import { getPosts, Post } from "../utils/posts.ts";
@@ -7,47 +6,42 @@ export default define.page(async function Home(ctx) {
   const posts = await getPosts();
 
   return (
-    <div class="pt-24">
+    <div class="pt-24 flex flex-col flex-1">
       <h1 class="text-4xl font-display text-text-primary mb-8">
         Bienvenue dans les archives{" "}
         <s class="text-3xl text-text-muted">pas terrible</s> de HorebZ
       </h1>
 
-      <div class="relative space-y-12 divide-y divide-border border-b border-border">
-        {posts.map((post: Post, index: number) => (
-          <article class="relative">
+      <div class="relative divide-y divide-border border-b border-border">
+        {posts.map((post: Post) => (
+          <article class="relative py-8 first:pt-0">
             <h3>
               <a
                 href={`/blog/${post.slug}`}
                 class="font-display hover:underline text-text-primary"
               >
-                {
-                  /* <span class="text-display text-gray-500">{post.slug} :</span>
-                {" "} */
-                }
                 {post.title}
               </a>
             </h3>
 
-            <p class="leading-tight text-sm text-text-secondary">
+            <p class="leading-relaxed text-sm text-text-secondary mb-3">
               {post.description}
             </p>
 
-            <Categories categories={post.category} />
-            <div class="flex justify-between mt-2">
-              <a
-                href={`/blog/${post.slug}`}
-                class="font-display hover:underline text-text-primary"
-              >
-                Feuilleter →
-              </a>
-              <span class="font-display shrink-0 line-height-0">
+            <div class="flex justify-between items-baseline font-mono text-xs text-text-muted tracking-wide">
+              <time datetime={post.date.toISOString()}>
                 {post.date.toLocaleDateString("fr-FR", {
                   year: "numeric",
                   month: "short",
                   day: "numeric",
                 })}
-              </span>
+              </time>
+              <a
+                href={`/blog/${post.slug}`}
+                class="hover:underline text-text-muted hover:text-text-primary"
+              >
+                Feuilleter →
+              </a>
             </div>
           </article>
         ))}
