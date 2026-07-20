@@ -3,7 +3,7 @@ title: Conception d'une FSM* maison
 description: Comment concevoir une finite step machine minimaliste pour piloter des formulaires dynamiques, persistants et faciles à faire évoluer.
 category: [Dev, Architecture, UX]
 date: "2026-05-02"
-published: false
+published: true
 ---
 
 _publication initiale sur le [blog tech d'indy.fr](https://tech.indy.fr/2026/05/05/conception-d-une-fsm-maison/)_
@@ -19,7 +19,7 @@ ensemble d’états et de transitions, de connaître l’état courant, d’iden
 possible et de mémoriser la progression, comme un GPS. On peut aussi parler de
 [State Pattern](https://refactoring.guru/design-patterns/state).
 
-## Contexte
+### Contexte
 
 Chez Indy, plusieurs parcours utilisateur reposent sur des formulaires, comme l’inscription ou le
 paramétrage du compte. Les réponses y sont enregistrées progressivement, certaines questions peuvent
@@ -39,7 +39,7 @@ explorer des solutions dédiées à ce type de modélisation. Mais les librairie
 comme [XState](https://stately.ai/docs/xstate), ne sont pas adaptées à notre besoin, souvent peu
 configurables ou parfois trop “usine à gaz”.
 
-## Définir les specs
+### Définir les specs
 
 Le cahier des charges est simple pour permettre une adoption totale et homogénéiser le
 fonctionnement des formulaires :
@@ -56,7 +56,7 @@ Pour limiter le coût initial de développement et limiter au maximum la dette t
 défini que des fonctionnalités plus avancées, comme la mise en cache des réponses en cas de retour
 en arrière, seraient déléguées au consommateur du module.
 
-## Conceptuellement ça donne quoi ?
+### Conceptuellement ça donne quoi ?
 
 Notre machine à états est volontairement minimaliste : une **liste ordonnée
 d’étapes** et un **contexte persistant**.
@@ -128,7 +128,7 @@ flowchart TB
     class A highlight;
 ```
 
-## Finite _Step_ Machine : quand les étapes remplacent les états
+### Finite _Step_ Machine : quand les étapes remplacent les états
 
 Cette réflexion est née en rédigeant cet article : _« C’est toujours une finite state machine ? »_
 
@@ -151,7 +151,7 @@ Nous nous sommes inspirés des _finite state machines_, mais pour en proposer un
 pragmatique et adaptée à nos besoins.** Une approche que nous aimons, avec un brin de mauvaise foi,
 surnommer _finite **step** machine_ (donc bien une FSM\* 😛 !).
 
-## Conclusion
+### Conclusion
 
 Notre besoin était simple. Dans ce contexte, construire une FSM minimaliste en interne était plus
 pertinent que d’adopter une grosse librairie, avec son coût d’apprentissage et sa complexité
