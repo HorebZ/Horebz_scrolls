@@ -12,19 +12,19 @@ export default define.page(async function Home(ctx) {
         <s class="text-3xl text-text-muted">pas terrible</s> de HorebZ
       </h1>
 
-      <div class="relative divide-y divide-border border-b border-border">
+      <div class="relative divide-y divide-border border-b border-border pt-8">
         {posts.map((post: Post) => (
           <article class="relative py-8 first:pt-0">
-            <h3>
+            <h2>
               <a
                 href={`/blog/${post.slug}`}
                 class="font-display hover:underline text-text-primary"
               >
                 {post.title}
               </a>
-            </h3>
+            </h2>
 
-            <p class="leading-relaxed text-sm text-text-secondary mb-3">
+            <p class="leading-relaxed text-m text-text-secondary mb-3">
               {post.description}
             </p>
 
